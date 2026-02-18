@@ -38,28 +38,38 @@
       <div class="masthead__menu">
         <nav id="site-nav" class="greedy-nav">
           <button><div class="navicon"></div></button>
-          <ul class="visible-links">
+          <!-- EN nav -->
+          <ul class="visible-links lang-nav lang-nav-en">
             <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
               <div class="masthead__menu-home-item"><a href="#about-me">Shuyang Zhu's Profile</a></div>
             </li>
-            <!-- EN nav -->
-            <li class="masthead__menu-item" data-nav="en"><a href="/#about-me">About Me</a></li>
-            <li class="masthead__menu-item" data-nav="en"><a href="/#-publications">Publications</a></li>
-            <li class="masthead__menu-item" data-nav="en"><a href="/#-projects">Projects</a></li>
-            <li class="masthead__menu-item" data-nav="en"><a href="/#-research">Awards</a></li>
-            <li class="masthead__menu-item" data-nav="en"><a href="/#-education">Education</a></li>
-            <!-- ZH nav -->
-            <li class="masthead__menu-item" data-nav="zh" style="display:none"><a href="/#about-me-zh">关于我</a></li>
-            <li class="masthead__menu-item" data-nav="zh" style="display:none"><a href="/#-publications-zh">发表</a></li>
-            <li class="masthead__menu-item" data-nav="zh" style="display:none"><a href="/#-projects-zh">项目</a></li>
-            <li class="masthead__menu-item" data-nav="zh" style="display:none"><a href="/#-research-zh">奖项</a></li>
-            <li class="masthead__menu-item" data-nav="zh" style="display:none"><a href="/#-education-zh">教育经历</a></li>
-            <!-- JA nav -->
-            <li class="masthead__menu-item" data-nav="ja" style="display:none"><a href="/#about-me-ja">自己紹介</a></li>
-            <li class="masthead__menu-item" data-nav="ja" style="display:none"><a href="/#-publications-ja">発表</a></li>
-            <li class="masthead__menu-item" data-nav="ja" style="display:none"><a href="/#-projects-ja">プロジェクト</a></li>
-            <li class="masthead__menu-item" data-nav="ja" style="display:none"><a href="/#-research-ja">受賞歴</a></li>
-            <li class="masthead__menu-item" data-nav="ja" style="display:none"><a href="/#-education-ja">学歴</a></li>
+            <li class="masthead__menu-item"><a href="/#about-me">About Me</a></li>
+            <li class="masthead__menu-item"><a href="/#-publications">Publications</a></li>
+            <li class="masthead__menu-item"><a href="/#-projects">Projects</a></li>
+            <li class="masthead__menu-item"><a href="/#-research">Awards</a></li>
+            <li class="masthead__menu-item"><a href="/#-education">Education</a></li>
+          </ul>
+          <!-- ZH nav -->
+          <ul class="visible-links lang-nav lang-nav-zh">
+            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
+              <div class="masthead__menu-home-item"><a href="#about-me-zh">朱舒阳的主页</a></div>
+            </li>
+            <li class="masthead__menu-item"><a href="/#about-me-zh">关于我</a></li>
+            <li class="masthead__menu-item"><a href="/#-publications-zh">发表</a></li>
+            <li class="masthead__menu-item"><a href="/#-projects-zh">项目</a></li>
+            <li class="masthead__menu-item"><a href="/#-research-zh">奖项</a></li>
+            <li class="masthead__menu-item"><a href="/#-education-zh">教育经历</a></li>
+          </ul>
+          <!-- JA nav -->
+          <ul class="visible-links lang-nav lang-nav-ja">
+            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
+              <div class="masthead__menu-home-item"><a href="#about-me-ja">朱舒阳のプロフィール</a></div>
+            </li>
+            <li class="masthead__menu-item"><a href="/#about-me-ja">自己紹介</a></li>
+            <li class="masthead__menu-item"><a href="/#-publications-ja">発表</a></li>
+            <li class="masthead__menu-item"><a href="/#-projects-ja">プロジェクト</a></li>
+            <li class="masthead__menu-item"><a href="/#-research-ja">受賞歴</a></li>
+            <li class="masthead__menu-item"><a href="/#-education-ja">学歴</a></li>
           </ul>
           <ul class="hidden-links hidden"></ul>
         </nav>
@@ -383,7 +393,7 @@
         el.classList.toggle('lang-active', el.dataset.lang === lang);
       });
       ['en', 'zh', 'ja'].forEach(function(l) {
-        document.querySelectorAll('[data-nav="' + l + '"]').forEach(function(el) {
+        document.querySelectorAll('.lang-nav-' + l).forEach(function(el) {
           el.style.display = (l === lang) ? '' : 'none';
         });
         var btn = document.getElementById('btn-' + l);

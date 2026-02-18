@@ -4,6 +4,12 @@
   }
 }
 
+/* Hide non-active language navs by default; JS overrides display */
+.lang-nav-zh,
+.lang-nav-ja {
+  display: none;
+}
+
 .sidebar .author__urls,
 .sidebar .author__urls-wrapper,
 .sidebar .profile_box {
@@ -65,3 +71,26 @@
 /* hide inactive lang blocks */
 [data-lang] { display: none; }
 [data-lang].lang-active { display: block; }
+
+/* ── Responsive paper-box fix ── */
+@media (max-width: 60em) {
+  .paper-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paper-box .paper-box-image {
+    min-width: unset !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    order: 1;
+  }
+  .paper-box .paper-box-image img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .paper-box .paper-box-text {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    order: 2;
+  }
+}
