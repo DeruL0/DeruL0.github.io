@@ -19,6 +19,26 @@
 
   <link rel="stylesheet" href="static/css/academicons.css" />
   <script src='static/js/latest.js' async></script>
+  <script>
+    // Replace with your GA4 Measurement ID, e.g. G-ABC1234567
+    window.GA_MEASUREMENT_ID = 'G-79D07V83Z5';
+    (function() {
+      var measurementId = window.GA_MEASUREMENT_ID;
+      if (!measurementId || measurementId === 'G-XXXXXXXXXX') return;
+
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId, { anonymize_ip: true });
+    })();
+  </script>
 </head>
 
 <body>
@@ -430,7 +450,8 @@
 
   <script src="static/js/main.min.js"></script>
   <script>
-    function setLang(lang) {
+    function setLang(lang, shouldTrack) {
+      if (shouldTrack === undefined) shouldTrack = true;
       document.querySelectorAll('[data-lang]').forEach(function(el) {
         el.classList.toggle('lang-active', el.dataset.lang === lang);
       });
@@ -442,9 +463,12 @@
         if (btn) btn.classList.toggle('active', l === lang);
       });
       localStorage.setItem('lang', lang);
+      if (shouldTrack && typeof window.gtag === 'function') {
+        window.gtag('event', 'switch_language', { language: lang });
+      }
     }
     (function() {
-      setLang(localStorage.getItem('lang') || 'en');
+      setLang(localStorage.getItem('lang') || 'en', false);
     })();
   </script>
 </body>
