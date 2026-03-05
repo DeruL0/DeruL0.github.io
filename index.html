@@ -20,11 +20,16 @@
   <link rel="stylesheet" href="static/css/academicons.css" />
   <script src='static/js/latest.js' async></script>
   <script>
-    // Replace with your GA4 Measurement ID, e.g. G-ABC1234567
-    window.GA_MEASUREMENT_ID = 'G-79D07V83Z5';
     (function() {
-      var measurementId = window.GA_MEASUREMENT_ID;
-      if (!measurementId || measurementId === 'G-XXXXXXXXXX') return;
+      // Light obfuscation only: deters casual scraping, not real secrecy.
+      var key = 23;
+      var encodedId = [80, 58, 32, 46, 83, 39, 32, 65, 47, 36, 77, 34];
+      var measurementId = encodedId.map(function(code) {
+        return String.fromCharCode(code ^ key);
+      }).join('');
+      if (!measurementId || measurementId.indexOf('G-') !== 0) return;
+
+      window.trackAnalyticsEvent = function() {};
 
       var script = document.createElement('script');
       script.async = true;
@@ -32,11 +37,15 @@
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function() {
+      var gtag = function() {
         window.dataLayer.push(arguments);
       };
-      window.gtag('js', new Date());
-      window.gtag('config', measurementId, { anonymize_ip: true });
+      gtag('js', new Date());
+      gtag('config', measurementId, { anonymize_ip: true });
+
+      window.trackAnalyticsEvent = function(eventName, params) {
+        gtag('event', eventName, params || {});
+      };
     })();
   </script>
 </head>
@@ -463,8 +472,8 @@
         if (btn) btn.classList.toggle('active', l === lang);
       });
       localStorage.setItem('lang', lang);
-      if (shouldTrack && typeof window.gtag === 'function') {
-        window.gtag('event', 'switch_language', { language: lang });
+      if (shouldTrack && typeof window.trackAnalyticsEvent === 'function') {
+        window.trackAnalyticsEvent('switch_language', { language: lang });
       }
     }
     (function() {
