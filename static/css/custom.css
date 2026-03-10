@@ -136,8 +136,10 @@
 /* ── Sidebar map widget ── */
 .sidebar-map-widget {
   margin-top: 1em;
-  text-align: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   overflow: hidden;
   /* height is set dynamically by JS after scale is applied */
 }

@@ -518,28 +518,72 @@
   </script>
   <script>
     (function () {
+      var wrapper = document.querySelector('.sidebar-map-widget');
+      var resizeObserver = null;
+      var observedTarget = null;
+      var rafId = null;
+
+      function getMapTarget() {
+        if (!wrapper) return null;
+        return wrapper.querySelector('#mapmyvisitors-widget');
+      }
+
+      function observeMapTarget() {
+        if (!resizeObserver) return;
+        var target = getMapTarget();
+        if (!target || target === observedTarget) return;
+        if (observedTarget) {
+          resizeObserver.unobserve(observedTarget);
+        }
+        observedTarget = target;
+        resizeObserver.observe(target);
+      }
+
       function scaleSidebarMap() {
-        var wrapper = document.querySelector('.sidebar-map-widget');
         if (!wrapper) return;
-        var el = wrapper.querySelector('canvas, iframe, img');
-        if (!el) return;
+        var target = getMapTarget();
+        if (!target) return;
         // Reset transform before measuring natural size
-        el.style.transform = '';
+        target.style.transform = '';
+        target.style.transformOrigin = '';
         wrapper.style.height = '';
-        var naturalW = el.scrollWidth || el.offsetWidth;
+        var naturalW = target.offsetWidth || target.scrollWidth;
+        var naturalH = target.offsetHeight || target.scrollHeight;
         var available = wrapper.clientWidth;
-        if (!naturalW || !available) return;
+        if (!naturalW || !naturalH || !available) return;
         var scale = Math.min(1, available / naturalW);
-        el.style.transform = 'scale(' + scale + ')';
-        el.style.transformOrigin = 'top center';
-        var naturalH = el.scrollHeight || el.offsetHeight;
+        target.style.transformOrigin = 'top center';
+        target.style.transform = 'scale(' + scale + ')';
         wrapper.style.height = Math.ceil(naturalH * scale) + 'px';
       }
-      window.addEventListener('load', scaleSidebarMap);
-      window.addEventListener('resize', scaleSidebarMap);
-      // Retry after external widget script finishes rendering
-      setTimeout(scaleSidebarMap, 1000);
-      setTimeout(scaleSidebarMap, 3000);
+
+      function requestScaleSidebarMap() {
+        observeMapTarget();
+        if (rafId !== null) return;
+        rafId = window.requestAnimationFrame(function () {
+          rafId = null;
+          scaleSidebarMap();
+        });
+      }
+
+      if ('ResizeObserver' in window && wrapper) {
+        resizeObserver = new ResizeObserver(requestScaleSidebarMap);
+        resizeObserver.observe(wrapper);
+      }
+
+      if ('MutationObserver' in window && wrapper) {
+        new MutationObserver(requestScaleSidebarMap).observe(wrapper, {
+          childList: true,
+          subtree: true
+        });
+      }
+
+      window.addEventListener('load', requestScaleSidebarMap);
+      window.addEventListener('resize', requestScaleSidebarMap);
+      // Retry after the external widget script and its async data have rendered.
+      setTimeout(requestScaleSidebarMap, 300);
+      setTimeout(requestScaleSidebarMap, 1000);
+      setTimeout(requestScaleSidebarMap, 3000);
     })();
   </script>
 </body>
