@@ -132,3 +132,26 @@
   }
 
 }
+
+/* ── Sidebar map widget ── */
+.sidebar-map-widget {
+  margin-top: 1em;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.sidebar-map-widget iframe,
+.sidebar-map-widget canvas,
+.sidebar-map-widget img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Hide on narrow screens where the sidebar is not pinned to the side */
+@media (max-width: 57.8em) {
+  .sidebar-map-widget {
+    display: none;
+  }
+}
