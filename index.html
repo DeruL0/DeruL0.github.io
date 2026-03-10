@@ -516,6 +516,32 @@
       setLang(localStorage.getItem('lang') || 'en', false);
     })();
   </script>
+  <script>
+    (function () {
+      function scaleSidebarMap() {
+        var wrapper = document.querySelector('.sidebar-map-widget');
+        if (!wrapper) return;
+        var el = wrapper.querySelector('canvas, iframe, img');
+        if (!el) return;
+        // Reset transform before measuring natural size
+        el.style.transform = '';
+        wrapper.style.height = '';
+        var naturalW = el.scrollWidth || el.offsetWidth;
+        var available = wrapper.clientWidth;
+        if (!naturalW || !available) return;
+        var scale = Math.min(1, available / naturalW);
+        el.style.transform = 'scale(' + scale + ')';
+        el.style.transformOrigin = 'top center';
+        var naturalH = el.scrollHeight || el.offsetHeight;
+        wrapper.style.height = Math.ceil(naturalH * scale) + 'px';
+      }
+      window.addEventListener('load', scaleSidebarMap);
+      window.addEventListener('resize', scaleSidebarMap);
+      // Retry after external widget script finishes rendering
+      setTimeout(scaleSidebarMap, 1000);
+      setTimeout(scaleSidebarMap, 3000);
+    })();
+  </script>
 </body>
 
 </html>

@@ -137,16 +137,9 @@
 .sidebar-map-widget {
   margin-top: 1em;
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
-}
-
-.sidebar-map-widget iframe,
-.sidebar-map-widget canvas,
-.sidebar-map-widget img {
-  max-width: 100% !important;
-  width: 100% !important;
-  height: auto !important;
+  /* height is set dynamically by JS after scale is applied */
 }
 
 /* Hide on narrow screens where the sidebar is not pinned to the side */
