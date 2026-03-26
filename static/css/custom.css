@@ -46,6 +46,21 @@
   margin-top: 0.15em;
 }
 
+.sidebar .sidebar-cv-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
+  width: 100%;
+  margin: 0.9em 0 0.75em;
+  padding: 0.65em 1em;
+  text-decoration: none;
+}
+
+.sidebar .sidebar-cv-link i {
+  margin: 0;
+}
+
 .page__content .award-cont {
   display: block;
   margin-left: 2.8em;
