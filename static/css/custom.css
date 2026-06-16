@@ -165,3 +165,7 @@
     display: none;
   }
 }
+
+.date-placeholder {
+  visibility: hidden;
+}
