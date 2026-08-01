@@ -66,6 +66,32 @@
   margin-left: 2.8em;
 }
 
+.page__content > [data-lang] > p,
+.page__content > [data-lang] > ul li,
+.page__content .paper-box-text ul li {
+  text-align: justify;
+  text-justify: auto;
+}
+
+.page__content > [data-lang] > .experience-list li {
+  text-align: start;
+}
+
+.page__content .experience-entry {
+  display: inline;
+}
+
+.page__content .experience-detail {
+  display: inline;
+  color: #5f6368;
+  font-size: 0.95em;
+}
+
+.page__content .experience-detail::before {
+  content: " \00b7  ";
+  color: #9aa0a6;
+}
+
 .paper-box-text p a {
   font-size: 1.3em;
 }
