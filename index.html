@@ -183,6 +183,21 @@
                 </ul>
               </div>
             </div>
+            <div class="paper-box">
+              <div class="paper-box-image">
+                <div class="badge">ICPE 2026</div>
+                <img src="./static/picture/project4.png" alt="CTGS illustration">
+              </div>
+              <div class="paper-box-text" style="width:100%">
+                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a><br>
+                  <strong>Accepted by ICPE 2026</strong>
+                </p>
+                <ul>
+                  <li>Represents industrial CT volumes with Gaussian Splatting, combining CT-specific slice supervision, geometric regularization, and native CUDA acceleration.</li>
+                  <li>Targets internal structures such as voids and material-density changes while supporting shape alignment for downstream analysis workflows.</li>
+                </ul>
+              </div>
+            </div>
 
             <h1 id="-projects">Projects</h1>
             <div class="paper-box">
@@ -227,21 +242,6 @@
                   <li>Models CT volumes as anisotropic octrees for compression, with the representation optimized directly from sparse projection data.</li>
                   <li>Maintains clear edge features and accurate surface extraction under sparse-projection training.</li>
                   <li>Under 256-view training, reached 42.75 dB projection PSNR and 30.77 dB slice PSNR, with the compressed model size around 8 MB.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="paper-box">
-              <div class="paper-box-image">
-                <img src="./static/picture/project4.png" alt="CTGS screenshot">
-              </div>
-              <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a> (Ongoing) <br>
-                  <strong>Gaussian Splatting Specifically Designed for Industrial CT</strong>
-                </p>
-                <ul>
-                  <li>A pipeline that turns CT volumes into a Gaussian Splatting representation.</li>
-                  <li>Focuses on CT internal structures such as voids and material density variations, as well as shape alignment, for downstream analysis workflows.</li>
-                  <li>Uses a hybrid Gaussian model with CT-specific slice supervision, geometric regularization, and native CUDA acceleration for efficient volume-based training.</li>
                 </ul>
               </div>
             </div>
@@ -297,9 +297,9 @@
             <h1 id="-experience">Work Experience</h1>
             <ul>
               <li><em>2026.08.01 – <span class="date-placeholder" aria-hidden="true">2026.08.01</span></em>: Tencent, Game Research &amp; Development Intern, Engine Research.</li>
-              <li><em>2026.07.01 – 2026.07.28</em>: Polyphony Digital, engineer(internship).</li>
-              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>: Synesthesia, Technical Development Intern.</li>
-              <li><em>2026.04.06 – 2026.05.13</em>: Fixstars, Year-round Intern.</li>
+              <li><em>2026.07.01 – 2026.07.28</em>: Polyphony Digital, engineer(internship). 3DGS segmentation-related development.</li>
+              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>: Synesthesia, Technical Development Intern. Measured inclination of complex wall-surface point clouds.</li>
+              <li><em>2026.04.06 – 2026.05.13</em>: Fixstars, Year-round Intern. Optimized VRAM management for video generation models.</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
@@ -339,6 +339,21 @@
                 <ul>
                   <li>受 Polycube 参数化启发，提出包含四个步骤的框架将三维点云重建为带有光滑分区的四边形网格，步骤包含一维骨架提取、骨架驱动分割、初始网格生成与进化式重建。</li>
                   <li>重建结果能良好保留点云原始几何特征，便于骨骼绑定等应用。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="paper-box">
+              <div class="paper-box-image">
+                <div class="badge">ICPE 2026</div>
+                <img src="./static/picture/project4.png" alt="CTGS 示意图">
+              </div>
+              <div class="paper-box-text" style="width:100%">
+                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a><br>
+                  <strong>Accepted by ICPE 2026</strong>
+                </p>
+                <ul>
+                  <li>将工业 CT 体数据表示为 Gaussian Splatting，结合 CT 特定的切片监督、几何正则化与原生 CUDA 加速。</li>
+                  <li>面向空洞、材料密度变化等内部结构建模，同时支持表面形状对齐，服务于后续分析工作流。</li>
                 </ul>
               </div>
             </div>
@@ -386,21 +401,6 @@
                   <li>将 CT 体积模型建模为各向异性八叉树进行压缩，可以直接由稀疏投影数据优化。</li>
                   <li>能够在稀疏投影训练情况下保持良好的边缘特征以及准确的表面提取能力。</li>
                   <li>256-view 训练下结果达到投影 PSNR 42.75 dB、切片 PSNR 30.77 dB，压缩后模型体积约为 8 MB。</li>
-                </ul>
-              </div>
-            </div>
-            <div class="paper-box">
-              <div class="paper-box-image">
-                <img src="./static/picture/project4.png" alt="CTGS 项目截图">
-              </div>
-              <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a><br>
-                  <strong>面向工业 CT 专门设计的 Gaussian Splatting</strong>
-                </p>
-                <ul>
-                  <li>一条将 CT 体数据转换为 Gaussian Splatting 表示的完整流程。</li>
-                  <li>关注 CT 内部构造（如空洞、材质密度不同等）和表面拟合（shape alignment）等问题，方便后续分析工作流。</li>
-                  <li>采用混合高斯模型，结合 CT 特定的切片监督、几何正则化与原生 CUDA 加速，实现高效的体数据训练。</li>
                 </ul>
               </div>
             </div>
@@ -456,9 +456,9 @@
             <h1 id="-experience-zh">工作经历</h1>
             <ul>
               <li><em>2026.08.01 – <span class="date-placeholder" aria-hidden="true">2026.08.01</span></em>：腾讯，Game Research &amp; Development Intern, Engine Research。</li>
-              <li><em>2026.07.01 – 2026.07.28</em>：Polyphony Digital，engineer(internship)。</li>
-              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>：Synesthesia，技术开发实习。</li>
-              <li><em>2026.04.06 – 2026.05.13</em>：Fixstars，通年实习。</li>
+              <li><em>2026.07.01 – 2026.07.28</em>：Polyphony Digital，engineer(internship)。开发 3DGS 分割相关工作。</li>
+              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>：Synesthesia，技术开发实习。测量复杂墙面点云倾斜度。</li>
+              <li><em>2026.04.06 – 2026.05.13</em>：Fixstars，通年实习。对视频生成模型进行 VRAM 最适化管理。</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
@@ -498,6 +498,21 @@
                 <ul>
                   <li>Polycube パラメータ化に着想を得て、三次元点群モデルをなめらかなパーティション付き四辺形メッシュに再構成する 4 ステップのフレームワーク（1D スケルトン抽出・スケルトン駆動分割・初期メッシュ生成・進化的再構成）を提案。</li>
                   <li>生成されたメッシュは元の点群の幾何学的特徴を忠実に保持し、スキニングなどの用途に適しています。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="paper-box">
+              <div class="paper-box-image">
+                <div class="badge">ICPE 2026</div>
+                <img src="./static/picture/project4.png" alt="CTGS 図">
+              </div>
+              <div class="paper-box-text" style="width:100%">
+                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a><br>
+                  <strong>Accepted by ICPE 2026</strong>
+                </p>
+                <ul>
+                  <li>工業用 CT ボリュームを Gaussian Splatting 表現として扱い、CT 固有のスライス監督、幾何正則化、ネイティブ CUDA 高速化を組み合わせています。</li>
+                  <li>空隙や材料密度変化などの内部構造を対象にしつつ、後続解析のための表面形状アラインメントも支援します。</li>
                 </ul>
               </div>
             </div>
@@ -545,21 +560,6 @@
                   <li>CT ボリュームモデルを異方性八分木として表現・圧縮し、疎な投影データから直接最適化できます。</li>
                   <li>疎投影での学習条件でも、良好なエッジ特徴と正確な表面抽出能力を維持します。</li>
                   <li>256-view 学習では、投影 PSNR 42.75 dB、スライス PSNR 30.77 dB を達成し、圧縮後のモデルサイズは約 8 MB です。</li>
-                </ul>
-              </div>
-            </div>
-            <div class="paper-box">
-              <div class="paper-box-image">
-                <img src="./static/picture/project4.png" alt="CTGS のスクリーンショット">
-              </div>
-              <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/CTGS">CTGS</a><br>
-                  <strong>工業用 CT 向けに設計した Gaussian Splatting</strong>
-                </p>
-                <ul>
-                  <li>CT ボリュームを Gaussian Splatting 表現へ変換するパイプライン。</li>
-                  <li>空隙や材質密度の違いなどの CT 内部構造と、表面フィッティングに着目し、後続の解析ワークフローに活用しやすくしています。</li>
-                  <li>ハイブリッド Gaussian モデルに、CT 固有のスライス監督、幾何正則化、ネイティブ CUDA 高速化を組み合わせ、効率的な体積ベース学習を実現。</li>
                 </ul>
               </div>
             </div>
@@ -615,9 +615,9 @@
             <h1 id="-experience-ja">職歴</h1>
             <ul>
               <li><em>2026.08.01 – <span class="date-placeholder" aria-hidden="true">2026.08.01</span></em>：テンセント、Game Research &amp; Development Intern, Engine Research。</li>
-              <li><em>2026.07.01 – 2026.07.28</em>：ポリフォニー・デジタル、engineer(internship)。</li>
-              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>：シナスタジア、技術開発インターン。</li>
-              <li><em>2026.04.06 – 2026.05.13</em>：フィックスターズ、通年インターン。</li>
+              <li><em>2026.07.01 – 2026.07.28</em>：ポリフォニー・デジタル、engineer(internship)。3DGS セグメンテーション関連の開発。</li>
+              <li><em>2026.05.13 – <span class="date-placeholder" aria-hidden="true">2026.05.13</span></em>：シナスタジア、技術開発インターン。複雑な壁面点群の傾斜度を計測。</li>
+              <li><em>2026.04.06 – 2026.05.13</em>：フィックスターズ、通年インターン。動画生成モデルの VRAM 最適化管理。</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
