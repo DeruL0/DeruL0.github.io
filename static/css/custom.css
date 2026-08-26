@@ -78,18 +78,36 @@
 }
 
 .page__content .experience-entry {
-  display: inline;
+  display: grid;
+  grid-template-columns: 9em minmax(0, 1fr);
+  column-gap: 0.35em;
+  align-items: baseline;
+}
+
+.page__content .experience-date {
+  white-space: nowrap;
+}
+
+.page__content .experience-body {
+  min-width: 0;
 }
 
 .page__content .experience-detail {
-  display: inline;
+  display: block;
+  margin-top: 0.1em;
   color: #5f6368;
   font-size: 0.95em;
+  line-height: 1.45;
 }
 
 .page__content .experience-detail::before {
-  content: " \00b7  ";
-  color: #9aa0a6;
+  content: none;
+}
+
+@media (max-width: 35em) {
+  .page__content .experience-entry {
+    grid-template-columns: 1fr;
+  }
 }
 
 .paper-box-text p a {
