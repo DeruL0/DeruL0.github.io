@@ -203,6 +203,21 @@
             <h1 id="-projects">Projects</h1>
             <div class="paper-box">
               <div class="paper-box-image">
+                <img src="./static/picture/project5.png" alt="Surface meshes reconstructed directly from X-ray projections, including topology changes">
+              </div>
+              <div class="paper-box-text">
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">X-ray Projection-to-Mesh</a> (Ongoing)<br>
+                  <strong>Topology-Adaptive Surface Reconstruction</strong>
+                </p>
+                <ul>
+                  <li>A pipeline that generates watertight surface meshes directly from X-ray projections, without reconstructing a volume first.</li>
+                  <li>Topology can change during optimization: the mesh can split into several parts, grow through-holes, or open internal cavities, without knowing the object’s topology in advance.</li>
+                  <li>Recovers the correct topology on every test shape. Surface error is about 0.1–0.15% of the bounding-box diagonal, and each shape fits in under a minute with native CUDA acceleration.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="paper-box">
+              <div class="paper-box-image">
                 <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume: ground truth vs 8 MB reconstruction, octree leaves and sparse-view results">
               </div>
               <div class="paper-box-text">
@@ -348,6 +363,21 @@
             <h1 id="-projects-zh">项目</h1>
             <div class="paper-box">
               <div class="paper-box-image">
+                <img src="./static/picture/project5.png" alt="直接从 X 射线投影重建表面网格及其拓扑变化">
+              </div>
+              <div class="paper-box-text">
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">X 射线投影到表面网格</a>（进行中）<br>
+                  <strong>拓扑自适应表面重建</strong>
+                </p>
+                <ul>
+                  <li>一条直接从 X 射线投影生成水密表面网格的流程，无需先重建体数据。</li>
+                  <li>拓扑可在优化过程中改变：网格可分裂为多个部分、生成贯穿孔洞或形成内部空腔，无需预先知道物体的拓扑。</li>
+                  <li>在所有测试形状上均恢复了正确拓扑；表面误差约为包围盒对角线的 0.1–0.15%，借助原生 CUDA 加速，每个形状的拟合时间不到一分钟。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="paper-box">
+              <div class="paper-box-image">
                 <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume：真值与 8 MB 重建对比、八叉树叶子与稀疏视角结果">
               </div>
               <div class="paper-box-text">
@@ -491,6 +521,21 @@
             </div>
 
             <h1 id="-projects-ja">プロジェクト</h1>
+            <div class="paper-box">
+              <div class="paper-box-image">
+                <img src="./static/picture/project5.png" alt="X 線投影から直接再構成した表面メッシュとトポロジー変化">
+              </div>
+              <div class="paper-box-text">
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">X 線投影から表面メッシュへ</a>（進行中）<br>
+                  <strong>トポロジー適応型表面再構成</strong>
+                </p>
+                <ul>
+                  <li>ボリュームを先に再構成することなく、X 線投影から直接、水密な表面メッシュを生成するパイプラインです。</li>
+                  <li>最適化中にトポロジーを変更でき、メッシュが複数の部分に分かれたり、貫通穴や内部空洞が形成されたりします。物体のトポロジーを事前に知る必要はありません。</li>
+                  <li>すべてのテスト形状で正しいトポロジーを復元しました。表面誤差はバウンディングボックス対角線の約 0.1～0.15%で、ネイティブ CUDA により各形状を 1 分未満でフィッティングできます。</li>
+                </ul>
+              </div>
+            </div>
             <div class="paper-box">
               <div class="paper-box-image">
                 <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume：真値と 8 MB 再構成の比較、八分木の葉、疎ビューの結果">
