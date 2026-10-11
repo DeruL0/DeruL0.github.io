@@ -210,8 +210,9 @@
                   <strong>Adaptive Projection-Domain CT Reconstruction</strong>
                 </p>
                 <ul>
-                  <li>Represents a CT volume as an adaptive octree with constant, trilinear and planar-step leaves, fitted directly to X-ray projections through an exact CUDA ray integrator, with no analytic reconstruction as initialization; tree structure and leaf types are chosen by held-out-view refits under a fixed byte budget.</li>
-                  <li>At 8 MB (232× smaller than the 1.98 GB voxel volume) it reaches 37.8 dB volume PSNR, 53.9 dB held-out projection PSNR and 0.19-voxel mean surface distance; training on 64 instead of 240 views costs only 0.55 dB. One run takes about 9 minutes on a laptop GPU.</li>
+                  <li>A pipeline that reconstructs CT volumes directly from X-ray projections into a compact adaptive octree, for storing and analyzing large industrial CT scans.</li>
+                  <li>Focuses on sharp material interfaces, thin gaps and accurate surface extraction under a fixed byte budget and sparse views: at 8 MB (232× smaller than the 1.98 GB voxel volume) it reaches 37.8 dB volume PSNR and 0.19-voxel mean surface distance, and loses only 0.55 dB when training views drop from 240 to 64.</li>
+                  <li>Uses typed octree leaves (constant, trilinear, planar step) with exact CUDA ray integration, held-out-view refinement decisions and an edge-preserving regularizer; one run takes about 9 minutes on a laptop GPU.</li>
                 </ul>
               </div>
             </div>
@@ -354,8 +355,9 @@
                   <strong>自适应投影域 CT 重建</strong>
                 </p>
                 <ul>
-                  <li>用叶子为常数、三线性或平面阶跃函数的自适应八叉树表示 CT 体积，通过精确的 CUDA 射线积分直接拟合 X 射线投影，不用解析重建做初值；树结构和叶子类型在固定字节预算下由留出视角的重拟合选择。</li>
-                  <li>8 MB（比 1.98 GB 体素体积小 232 倍）下体积 PSNR 37.8 dB、留出投影 PSNR 53.9 dB、平均表面距离 0.19 体素；训练视角从 240 降到 64 只损失 0.55 dB。笔记本 GPU 上一次训练约 9 分钟。</li>
+                  <li>直接从 X 射线投影把 CT 体积重建成紧凑的自适应八叉树，用于大规模工业 CT 数据的存储与分析。</li>
+                  <li>关注材料界面的清晰度、细缝和准确的表面提取，适用于固定字节预算和稀疏视角：8 MB（比 1.98 GB 体素体积小 232 倍）下体积 PSNR 37.8 dB、平均表面距离 0.19 体素；训练视角从 240 降到 64 只损失 0.55 dB。</li>
+                  <li>叶子分为常数、三线性、平面阶跃三种类型，配合精确的 CUDA 射线积分、基于留出视角的细化决策和保边正则；笔记本 GPU 上一次训练约 9 分钟。</li>
                 </ul>
               </div>
             </div>
@@ -498,8 +500,9 @@
                   <strong>適応的な投影ドメイン CT 再構成</strong>
                 </p>
                 <ul>
-                  <li>葉が定数・三線形・平面ステップ関数の適応八分木で CT ボリュームを表現し、厳密な CUDA レイ積分で X 線投影に直接フィッティングします（解析的再構成による初期化なし）。木構造と葉の種類は、固定バイト予算のもとで保留ビューへの再フィッティングにより選択します。</li>
-                  <li>8 MB（1.98 GB のボクセルボリュームの 1/232）でボリューム PSNR 37.8 dB、保留投影 PSNR 53.9 dB、平均表面距離 0.19 ボクセルを達成し、学習ビューを 240 から 64 に減らしても低下は 0.55 dB のみです。ノート PC の GPU で 1 回の学習は約 9 分です。</li>
+                  <li>X 線投影から CT ボリュームを直接コンパクトな適応八分木として再構成し、大規模な産業用 CT データの保存と解析に用いるパイプラインです。</li>
+                  <li>材料界面の鮮明さ、細い隙間、正確な表面抽出に重点を置き、固定バイト予算と疎ビューに対応します。8 MB（1.98 GB のボクセルボリュームの 1/232）でボリューム PSNR 37.8 dB、平均表面距離 0.19 ボクセルを達成し、学習ビューを 240 から 64 に減らしても低下は 0.55 dB のみです。</li>
+                  <li>定数・三線形・平面ステップの 3 種類の葉、厳密な CUDA レイ積分、保留ビューに基づく細分化の判定、エッジ保存正則化を組み合わせ、ノート PC の GPU で 1 回の学習は約 9 分です。</li>
                 </ul>
               </div>
             </div>
