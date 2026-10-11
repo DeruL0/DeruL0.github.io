@@ -75,9 +75,9 @@
             <li class="masthead__menu-item"><a href="/#about-me">Profile</a></li>
             <li class="masthead__menu-item"><a href="/#-publications">Publications</a></li>
             <li class="masthead__menu-item"><a href="/#-projects">Projects</a></li>
-            <li class="masthead__menu-item"><a href="/#-research">Awards</a></li>
-            <li class="masthead__menu-item"><a href="/#-education">Education</a></li>
             <li class="masthead__menu-item"><a href="/#-experience">Work Experience</a></li>
+            <li class="masthead__menu-item"><a href="/#-education">Education</a></li>
+            <li class="masthead__menu-item"><a href="/#-research">Awards</a></li>
           </ul>
           <!-- ZH nav -->
           <ul class="visible-links lang-nav lang-nav-zh">
@@ -87,9 +87,9 @@
             <li class="masthead__menu-item"><a href="/#about-me-zh">个人简介</a></li>
             <li class="masthead__menu-item"><a href="/#-publications-zh">发表</a></li>
             <li class="masthead__menu-item"><a href="/#-projects-zh">项目</a></li>
-            <li class="masthead__menu-item"><a href="/#-research-zh">奖项</a></li>
-            <li class="masthead__menu-item"><a href="/#-education-zh">教育经历</a></li>
             <li class="masthead__menu-item"><a href="/#-experience-zh">工作经历</a></li>
+            <li class="masthead__menu-item"><a href="/#-education-zh">教育经历</a></li>
+            <li class="masthead__menu-item"><a href="/#-research-zh">奖项</a></li>
           </ul>
           <!-- JA nav -->
           <ul class="visible-links lang-nav lang-nav-ja">
@@ -99,9 +99,9 @@
             <li class="masthead__menu-item"><a href="/#about-me-ja">プロフィール</a></li>
             <li class="masthead__menu-item"><a href="/#-publications-ja">発表</a></li>
             <li class="masthead__menu-item"><a href="/#-projects-ja">プロジェクト</a></li>
-            <li class="masthead__menu-item"><a href="/#-research-ja">受賞歴</a></li>
-            <li class="masthead__menu-item"><a href="/#-education-ja">学歴</a></li>
             <li class="masthead__menu-item"><a href="/#-experience-ja">職歴</a></li>
+            <li class="masthead__menu-item"><a href="/#-education-ja">学歴</a></li>
+            <li class="masthead__menu-item"><a href="/#-research-ja">受賞歴</a></li>
           </ul>
           <ul class="hidden-links hidden"></ul>
         </nav>
@@ -218,11 +218,11 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume: ground truth vs 8 MB reconstruction, octree leaves and sparse-view results">
+                <img src="./static/picture/project5.jpg" alt="Adaptive octree CT reconstruction from sparse X-ray projections">
               </div>
               <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">Adaptive CT Volume</a> (Ongoing) <br>
-                  <strong>Adaptive Projection-Domain CT Reconstruction</strong>
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">Adaptive Octree CT Reconstruction from Sparse Projections</a> (Ongoing)<br>
+                  <strong>Compact Projection-Domain Volume Representation</strong>
                 </p>
                 <ul>
                   <li>A pipeline that reconstructs CT volumes directly from X-ray projections into a compact adaptive octree, for storing and analyzing large industrial CT scans.</li>
@@ -280,12 +280,12 @@
               </li>
             </ul>
 
-            <h1 id="-research">Awards</h1>
-            <ul>
-              <li><em>2025</em>: The University of Tokyo Fellowship.</li>
-              <li><em>2023</em>: 9th "Internet+" Innovation and Entrepreneurship Competition, Gansu Province Gold Award.</li>
-              <li><em>2022</em>: 13th BlueBridge Cup, Gansu Province Third Prize.</li>
-              <li><em>2022–2024</em>: Lanzhou University Scholarship.</li>
+            <h1 id="-experience">Work Experience</h1>
+            <ul class="experience-list">
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Tencent</strong>, Game Research &amp; Development Intern, Engine Research.</span><span class="experience-detail">Developed a new volumetric smoke rendering mode in Unreal Engine 5, enabling efficient smoke volume rendering with global illumination.</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer(internship).</span><span class="experience-detail">Built a FlashSplat-based 3DGS segmentation tool that extracts object-level segments from trained 3D Gaussian Splatting assets within seconds through click selection, without pre-baked segmentation attributes.</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>, Technical Development Intern.</span><span class="experience-detail">Delivered a wall-surface inclination metrology workflow that achieves stable millimeter-level accuracy on complex wall point clouds with vegetation, protrusions, and other disturbances.</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>:</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><span class="experience-detail">Reduced Open-Sora 2 inference peak VRAM from 39.7 GB to 20.93 GB via lazy load, unified memory, and cache residency management, so it could run efficiently on 24 GB-class GPUs without quantization.</span></span></span></li>
             </ul>
 
             <h1 id="-education">Education</h1>
@@ -295,12 +295,12 @@
               <li><em>2021.09 – 2025.07</em>: B.E. in Digital Media Technology, Lanzhou University, Lanzhou, China.</li>
             </ul>
 
-            <h1 id="-experience">Work Experience</h1>
-            <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Tencent</strong>, Game Research &amp; Development Intern, Engine Research.</span><span class="experience-detail">Developed a new volumetric smoke rendering mode in Unreal Engine 5, enabling efficient smoke volume rendering with global illumination.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer(internship).</span><span class="experience-detail">Built a FlashSplat-based 3DGS segmentation tool that extracts object-level segments from trained 3D Gaussian Splatting assets within seconds through click selection, without pre-baked segmentation attributes.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>, Technical Development Intern.</span><span class="experience-detail">Delivered a wall-surface inclination metrology workflow that achieves stable millimeter-level accuracy on complex wall point clouds with vegetation, protrusions, and other disturbances.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>:</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><span class="experience-detail">Reduced Open-Sora 2 inference peak VRAM from 39.7 GB to 20.93 GB via lazy load, unified memory, and cache residency management, so it could run efficiently on 24 GB-class GPUs without quantization.</span></span></span></li>
+            <h1 id="-research">Awards</h1>
+            <ul>
+              <li><em>2025</em>: The University of Tokyo Fellowship.</li>
+              <li><em>2023</em>: 9th "Internet+" Innovation and Entrepreneurship Competition, Gansu Province Gold Award.</li>
+              <li><em>2022</em>: 13th BlueBridge Cup, Gansu Province Third Prize.</li>
+              <li><em>2022–2024</em>: Lanzhou University Scholarship.</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
@@ -378,11 +378,11 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume：真值与 8 MB 重建对比、八叉树叶子与稀疏视角结果">
+                <img src="./static/picture/project5.jpg" alt="基于自适应八叉树的稀疏 X 射线投影 CT 重建结果">
               </div>
               <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">Adaptive CT Volume</a><br>
-                  <strong>自适应投影域 CT 重建</strong>
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">基于自适应八叉树的稀疏投影 CT 重建</a>（进行中）<br>
+                  <strong>紧凑的投影域体数据表示</strong>
                 </p>
                 <ul>
                   <li>直接从 X 射线投影把 CT 体积重建成紧凑的自适应八叉树，用于大规模工业 CT 数据的存储与分析。</li>
@@ -440,12 +440,12 @@
               </li>
             </ul>
 
-            <h1 id="-research-zh">奖项</h1>
-            <ul>
-              <li><em>2025</em>：东京大学Fellowship（University of Tokyo Fellowship）。</li>
-              <li><em>2023</em>：第九届"互联网+"创新创业大赛甘肃省金奖。</li>
-              <li><em>2022</em>：第十三届蓝桥杯甘肃省三等奖。</li>
-              <li><em>2022–2024</em>：兰州大学奖学金。</li>
+            <h1 id="-experience-zh">工作经历</h1>
+            <ul class="experience-list">
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>腾讯</strong>，Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">在 Unreal Engine 5 中开发全新体积烟雾渲染模式，实现高效的带有全局光照的烟雾体渲染。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，Engineer(internship)。</span><span class="experience-detail">开发基于 FlashSplat 的 3DGS 分割工具，在无需预先 bake 分割属性的情况下，通过点击选择等操作在数秒内对已训练好的 3D Gaussian Splatting 资产进行物体级分割提取。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>，技术开发实习。</span><span class="experience-detail">交付墙面倾斜度量测流程，在含有植被、墙面突出等复杂干扰的墙面点云场景下，稳定实现毫米级准确测量。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习。</span><span class="experience-detail">通过 lazy load、unified memory 和缓存驻留管理，将 Open-Sora 2 推理峰值 VRAM 从 39.7 GB 降至 20.93 GB，在无需量化的情况下使其可在 24 GB 级 GPU 上高效运行。</span></span></span></li>
             </ul>
 
             <h1 id="-education-zh">教育经历</h1>
@@ -455,12 +455,12 @@
               <li><em>2021.09 – 2025.07</em>：工学学士，兰州大学 新闻与传播学院　数字媒体技术专业，兰州，中国。</li>
             </ul>
 
-            <h1 id="-experience-zh">工作经历</h1>
-            <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>腾讯</strong>，Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">在 Unreal Engine 5 中开发全新体积烟雾渲染模式，实现高效的带有全局光照的烟雾体渲染。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，Engineer(internship)。</span><span class="experience-detail">开发基于 FlashSplat 的 3DGS 分割工具，在无需预先 bake 分割属性的情况下，通过点击选择等操作在数秒内对已训练好的 3D Gaussian Splatting 资产进行物体级分割提取。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>，技术开发实习。</span><span class="experience-detail">交付墙面倾斜度量测流程，在含有植被、墙面突出等复杂干扰的墙面点云场景下，稳定实现毫米级准确测量。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习。</span><span class="experience-detail">通过 lazy load、unified memory 和缓存驻留管理，将 Open-Sora 2 推理峰值 VRAM 从 39.7 GB 降至 20.93 GB，在无需量化的情况下使其可在 24 GB 级 GPU 上高效运行。</span></span></span></li>
+            <h1 id="-research-zh">奖项</h1>
+            <ul>
+              <li><em>2025</em>：东京大学Fellowship（University of Tokyo Fellowship）。</li>
+              <li><em>2023</em>：第九届"互联网+"创新创业大赛甘肃省金奖。</li>
+              <li><em>2022</em>：第十三届蓝桥杯甘肃省三等奖。</li>
+              <li><em>2022–2024</em>：兰州大学奖学金。</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
@@ -538,11 +538,11 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="Adaptive CT Volume：真値と 8 MB 再構成の比較、八分木の葉、疎ビューの結果">
+                <img src="./static/picture/project5.jpg" alt="適応八分木による疎 X 線投影 CT 再構成結果">
               </div>
               <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">Adaptive CT Volume</a><br>
-                  <strong>適応的な投影ドメイン CT 再構成</strong>
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">適応八分木による疎投影 CT 再構成</a>（進行中）<br>
+                  <strong>コンパクトな投影領域ボリューム表現</strong>
                 </p>
                 <ul>
                   <li>X 線投影から CT ボリュームを直接コンパクトな適応八分木として再構成し、大規模な産業用 CT データの保存と解析に用いるパイプラインです。</li>
@@ -600,12 +600,12 @@
               </li>
             </ul>
 
-            <h1 id="-research-ja">受賞歴</h1>
-            <ul>
-              <li><em>2025</em>：東京大学フェローシップ（University of Tokyo Fellowship）。</li>
-              <li><em>2023</em>：第 9 回「インターネット+」イノベーション・起業コンテスト 甘粛省金賞。</li>
-              <li><em>2022</em>：第 13 回ブルーブリッジカップ 甘粛省三等賞。</li>
-              <li><em>2022–2024</em>：蘭州大学奨学金。</li>
+            <h1 id="-experience-ja">職歴</h1>
+            <ul class="experience-list">
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>テンセント</strong>、Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">Unreal Engine 5 上で新しい体積煙レンダリングモードを開発し、グローバルイルミネーションを伴う煙ボリュームの効率的なレンダリングを実現。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>ポリフォニー・デジタル</strong>、Engineer(internship)。</span><span class="experience-detail">FlashSplat ベースの 3DGS セグメンテーションツールを開発し、事前にセグメンテーション属性を bake せず、クリック選択などの操作により学習済み 3D Gaussian Splatting アセットから物体単位の領域を数秒で抽出。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>シナスタジア</strong>、技術開発インターン。</span><span class="experience-detail">植生や壁面の突出など複雑な外乱を含む壁面点群に対して、ミリメートル級の精度で安定して傾斜を測定できるワークフローを構築。</span></span></span></li>
+              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><span class="experience-detail">Lazy load、unified memory、キャッシュ常駐管理により Open-Sora 2 推論時のピーク VRAM を 39.7 GB から 20.93 GB へ削減し、量子化なしで 24 GB 級 GPU 上での効率的な実行を実現。</span></span></span></li>
             </ul>
 
             <h1 id="-education-ja">学歴</h1>
@@ -615,12 +615,12 @@
               <li><em>2021.09 – 2025.07</em>：工学学士、蘭州大学 新聞与伝播学院 デジタルメディア技術専攻、蘭州、中国。</li>
             </ul>
 
-            <h1 id="-experience-ja">職歴</h1>
-            <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>テンセント</strong>、Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">Unreal Engine 5 上で新しい体積煙レンダリングモードを開発し、グローバルイルミネーションを伴う煙ボリュームの効率的なレンダリングを実現。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>ポリフォニー・デジタル</strong>、Engineer(internship)。</span><span class="experience-detail">FlashSplat ベースの 3DGS セグメンテーションツールを開発し、事前にセグメンテーション属性を bake せず、クリック選択などの操作により学習済み 3D Gaussian Splatting アセットから物体単位の領域を数秒で抽出。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>シナスタジア</strong>、技術開発インターン。</span><span class="experience-detail">植生や壁面の突出など複雑な外乱を含む壁面点群に対して、ミリメートル級の精度で安定して傾斜を測定できるワークフローを構築。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><span class="experience-detail">Lazy load、unified memory、キャッシュ常駐管理により Open-Sora 2 推論時のピーク VRAM を 39.7 GB から 20.93 GB へ削減し、量子化なしで 24 GB 級 GPU 上での効率的な実行を実現。</span></span></span></li>
+            <h1 id="-research-ja">受賞歴</h1>
+            <ul>
+              <li><em>2025</em>：東京大学フェローシップ（University of Tokyo Fellowship）。</li>
+              <li><em>2023</em>：第 9 回「インターネット+」イノベーション・起業コンテスト 甘粛省金賞。</li>
+              <li><em>2022</em>：第 13 回ブルーブリッジカップ 甘粛省三等賞。</li>
+              <li><em>2022–2024</em>：蘭州大学奨学金。</li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
