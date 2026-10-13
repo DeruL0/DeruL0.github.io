@@ -110,7 +110,8 @@
   }
 }
 
-.paper-box-text p a {
+.paper-box-text p a,
+.paper-box-text p .paper-title {
   font-size: 1.3em;
 }
 /* ── Language switcher ── */
