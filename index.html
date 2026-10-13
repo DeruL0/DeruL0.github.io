@@ -195,7 +195,7 @@
                 <ul>
                   <li>An industrial CT algorithm that converts CT volumes into a compact Gaussian Splatting representation.</li>
                   <li>Focuses on internal CT structures, including voids and variations in material density, and surface shape alignment to support downstream analysis such as surface extraction.</li>
-                  <li>Uses a hybrid model of surface and bulk Gaussians to represent material boundaries and internal attenuation, respectively; file size can be reduced to about 1/35 of the original DICOM data in the best case, with the bidirectional surface distance of extracted meshes at about 0.23–0.50% of the reference model's bounding box diagonal.</li>
+                  <li>Uses a hybrid model of surface and bulk Gaussians to represent material boundaries and internal attenuation, respectively; file size can be reduced to about 1/35 of the original DICOM data in the best case, with extracted meshes achieving a normalized Chamfer-L1 of about 0.23–0.50%.</li>
                 </ul>
               </div>
             </div>
@@ -355,7 +355,7 @@
                 <ul>
                   <li>一种将 CT 体数据转换为紧凑 Gaussian Splatting 表示的工业 CT 算法。</li>
                   <li>关注 CT 内部结构（如空洞、材料密度变化等）和表面形状对齐，适合后续表面提取等分析工作流。</li>
-                  <li>采用表面高斯与体积高斯的混合模型，分别表示材料边界和内部衰减分布；文件大小最小可减至原始 DICOM 数据的约 1/35，提取网格的双向表面距离约为参考模型包围盒对角线的 0.23%～0.50%。</li>
+                  <li>采用表面高斯与体积高斯的混合模型，分别表示材料边界和内部衰减分布；文件大小最小可减至原始 DICOM 数据的约 1/35，提取网格的归一化 Chamfer-L1 约为 0.23%～0.50%。</li>
                 </ul>
               </div>
             </div>
@@ -515,7 +515,7 @@
                 <ul>
                   <li>CT ボリュームをコンパクトな Gaussian Splatting 表現へ変換する、工業用 CT アルゴリズムです。</li>
                   <li>空隙や材料密度の変化などの CT 内部構造と表面形状の整合に着目し、表面抽出などの後続の解析ワークフローに適しています。</li>
-                  <li>表面ガウスと体積ガウスのハイブリッドモデルを採用し、材料境界と内部の減衰分布をそれぞれ表現します。ファイルサイズは最小で元の DICOM データの約 1/35 となり、抽出メッシュの双方向表面距離は参照モデルのバウンディングボックス対角線の約 0.23～0.50% です。</li>
+                  <li>表面ガウスと体積ガウスのハイブリッドモデルを採用し、材料境界と内部の減衰分布をそれぞれ表現します。ファイルサイズは最小で元の DICOM データの約 1/35 となり、抽出メッシュの正規化 Chamfer-L1 は約 0.23～0.50% です。</li>
                 </ul>
               </div>
             </div>
