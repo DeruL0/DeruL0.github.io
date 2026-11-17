@@ -282,10 +282,22 @@
 
             <h1 id="-experience">Work Experience</h1>
             <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Tencent</strong>, Game Research &amp; Development Intern, Engine Research.</span><span class="experience-detail">Developed a new volumetric smoke rendering mode in Unreal Engine 5, enabling efficient smoke volume rendering with global illumination.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer(internship).</span><span class="experience-detail">Built a FlashSplat-based 3DGS segmentation tool that extracts object-level segments from trained 3D Gaussian Splatting assets within seconds through click selection, without pre-baked segmentation attributes.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – Present</em>:</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>, Technical Development Intern.</span><span class="experience-detail">Delivered a wall-surface inclination metrology workflow that achieves stable millimeter-level accuracy on complex wall point clouds with vegetation, protrusions, and other disturbances.</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>:</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><span class="experience-detail">Reduced Open-Sora 2 inference peak VRAM from 39.7 GB to 20.93 GB via lazy load, unified memory, and cache residency management, so it could run efficiently on 24 GB-class GPUs without quantization.</span></span></span></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – Present</em>:</span><div class="experience-body"><span class="experience-role"><strong>Tencent</strong>, Game Research &amp; Development Intern, Engine Research.</span><ul class="experience-detail">
+                <li>Developed a new volumetric smoke rendering pipeline in Unreal Engine 5 based on 4D Gaussian Splatting (4DGS). It supports global illumination and shadow casting, and faithfully reproduces the look of the original training data (VDB / Niagara).</li>
+                <li>Achieved efficient real-time rendering: each Actor holds on the order of 100K Gaussian primitives in about 55 MB of GPU memory, and full-screen smoke renders in about 1.5 ms at 2K resolution.</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer (Internship).</span><ul class="experience-detail">
+                <li>Developed an interactive 3DGS segmentation tool based on FlashSplat. Without pre-baked segmentation attributes, it extracts object-level segments from trained 3D Gaussian Splatting assets within seconds through click selection.</li>
+                <li>Implemented reference-scale size calibration on a PS5 development kit. The user specifies a reference segment and its real length in a 2D view, and the system solves for a scale factor that calibrates in-game objects to their true physical size.</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – Present</em>:</span><div class="experience-body"><span class="experience-role"><strong>Synesthesias</strong>, Technical Development Intern.</span><ul class="experience-detail">
+                <li><strong>3D point-cloud wall inclination measurement:</strong> Designed and implemented a wall inclination measurement pipeline. It combines SVD plane fitting, depth layering and connected-component analysis to isolate the main wall surface from point clouds with vegetation and protrusions, then estimates inclination with robust regression to millimeter-level accuracy.</li>
+                <li><strong>CityVision:</strong> Contributing to feature development for CityVision, a landscape design tool built on Unity and PLATEAU 3D city models. Responsible for the design and implementation of features such as interactive area measurement.</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>:</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><ul class="experience-detail">
+                <li>Reduced Open-Sora 2 inference peak VRAM from 39.7 GB to 20.93 GB through lazy loading, unified memory and cache residency management.</li>
+                <li>Enabled efficient inference on 24 GB-class GPUs without model quantization.</li>
+              </ul></div></div></li>
             </ul>
 
             <h1 id="-education">Education</h1>
@@ -442,10 +454,22 @@
 
             <h1 id="-experience-zh">工作经历</h1>
             <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>腾讯</strong>，Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">在 Unreal Engine 5 中开发全新体积烟雾渲染模式，实现高效的带有全局光照的烟雾体渲染。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，Engineer(internship)。</span><span class="experience-detail">开发基于 FlashSplat 的 3DGS 分割工具，在无需预先 bake 分割属性的情况下，通过点击选择等操作在数秒内对已训练好的 3D Gaussian Splatting 资产进行物体级分割提取。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 至今</em>：</span><span class="experience-body"><span class="experience-role"><strong>Synesthesia</strong>，技术开发实习。</span><span class="experience-detail">交付墙面倾斜度量测流程，在含有植被、墙面突出等复杂干扰的墙面点云场景下，稳定实现毫米级准确测量。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习。</span><span class="experience-detail">通过 lazy load、unified memory 和缓存驻留管理，将 Open-Sora 2 推理峰值 VRAM 从 39.7 GB 降至 20.93 GB，在无需量化的情况下使其可在 24 GB 级 GPU 上高效运行。</span></span></span></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – 至今</em>：</span><div class="experience-body"><span class="experience-role"><strong>腾讯</strong>，Game Research &amp; Development Intern, Engine Research。</span><ul class="experience-detail">
+                <li>在 Unreal Engine 5 中开发基于四维高斯泼溅（4DGS）的全新体积烟雾渲染管线，支持全局光照与阴影投射，能够准确复现原始训练数据（VDB / Niagara）的视觉效果。</li>
+                <li>实现高效实时渲染：单个 Actor 承载十万量级高斯基元，显存占用约 55 MB；2K 分辨率下全屏烟雾渲染耗时约 1.5 ms。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，工程师（实习）。</span><ul class="experience-detail">
+                <li>开发基于 FlashSplat 的 3DGS 交互式分割工具。无需预烘焙分割属性，通过点选即可在数秒内从已训练的 3D Gaussian Splatting 资产中提取物体级分割结果。</li>
+                <li>在 PS5 开发机上实现基于参考尺度的尺寸标定功能。用户在 2D 视图中指定参考线段及其真实长度，系统据此解算缩放系数，将游戏内物体校准至真实物理尺寸。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – 至今</em>：</span><div class="experience-body"><span class="experience-role"><strong>Synesthesias</strong>，技术开发实习生。</span><ul class="experience-detail">
+                <li><strong>三维点云墙面倾斜测量：</strong>设计并实现墙面倾斜测量流程。结合 SVD 平面拟合、深度分层与连通域分析，从含植被遮挡和墙面凸起的点云中分离出主体墙面，再用稳健回归估计倾斜度，测量精度达到毫米级。</li>
+                <li><strong>CityVision：</strong>参与景观设计工具 CityVision 的功能开发，该工具基于 Unity 与 PLATEAU 3D 城市模型。负责交互式面积测量等功能的设计与实现。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习生。</span><ul class="experience-detail">
+                <li>通过延迟加载（lazy load）、统一内存（unified memory）与缓存驻留管理，将 Open-Sora 2 推理峰值显存从 39.7 GB 降至 20.93 GB。</li>
+                <li>无需模型量化，即可在 24 GB 级 GPU 上高效推理。</li>
+              </ul></div></div></li>
             </ul>
 
             <h1 id="-education-zh">教育经历</h1>
@@ -602,10 +626,22 @@
 
             <h1 id="-experience-ja">職歴</h1>
             <ul class="experience-list">
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.08 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>テンセント</strong>、Game Research &amp; Development Intern, Engine Research。</span><span class="experience-detail">Unreal Engine 5 上で新しい体積煙レンダリングモードを開発し、グローバルイルミネーションを伴う煙ボリュームの効率的なレンダリングを実現。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><span class="experience-body"><span class="experience-role"><strong>ポリフォニー・デジタル</strong>、Engineer(internship)。</span><span class="experience-detail">FlashSplat ベースの 3DGS セグメンテーションツールを開発し、事前にセグメンテーション属性を bake せず、クリック選択などの操作により学習済み 3D Gaussian Splatting アセットから物体単位の領域を数秒で抽出。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.05 – 現在</em>：</span><span class="experience-body"><span class="experience-role"><strong>シナスタジア</strong>、技術開発インターン。</span><span class="experience-detail">植生や壁面の突出など複雑な外乱を含む壁面点群に対して、ミリメートル級の精度で安定して傾斜を測定できるワークフローを構築。</span></span></span></li>
-              <li><span class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><span class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><span class="experience-detail">Lazy load、unified memory、キャッシュ常駐管理により Open-Sora 2 推論時のピーク VRAM を 39.7 GB から 20.93 GB へ削減し、量子化なしで 24 GB 級 GPU 上での効率的な実行を実現。</span></span></span></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – 現在</em>：</span><div class="experience-body"><span class="experience-role"><strong>テンセント</strong>、Game Research &amp; Development Intern, Engine Research。</span><ul class="experience-detail">
+                <li>Unreal Engine 5 で 4 次元ガウシアンスプラッティング（4DGS）に基づく新しい体積煙レンダリングパイプラインを開発。グローバルイルミネーションと影の投影に対応し、学習元データ（VDB / Niagara）の見た目を忠実に再現。</li>
+                <li>高効率なリアルタイムレンダリングを実現：1 アクターあたり 10 万オーダーのガウシアンプリミティブを約 55 MB の GPU メモリで保持し、2K 解像度での全画面の煙の描画は約 1.5 ms。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><div class="experience-body"><span class="experience-role"><strong>ポリフォニー・デジタル</strong>、エンジニア（インターン）。</span><ul class="experience-detail">
+                <li>FlashSplat ベースの 3DGS インタラクティブセグメンテーションツールを開発。セグメンテーション属性の事前ベイクなしで、クリック操作により学習済み 3D Gaussian Splatting アセットから物体単位のセグメントを数秒で抽出。</li>
+                <li>PS5 開発機上で参照スケールに基づくサイズキャリブレーション機能を実装。2D ビュー上で参照線分とその実寸を指定すると、スケール係数を算出し、ゲーム内オブジェクトを実際の物理サイズに補正。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – 現在</em>：</span><div class="experience-body"><span class="experience-role"><strong>シナスタジア</strong>、技術開発インターン。</span><ul class="experience-detail">
+                <li><strong>3 次元点群による壁面傾斜計測：</strong>壁面傾斜計測パイプラインを設計・実装。SVD 平面フィッティング、深度レイヤリング、連結成分解析を組み合わせて植生や突起を含む点群から主壁面を抽出し、ロバスト回帰によりミリ単位の精度で傾斜を推定。</li>
+                <li><strong>CityVision：</strong>Unity と PLATEAU 3D 都市モデルを基盤とする景観設計ツール CityVision の機能開発に参画。インタラクティブな面積計測などの機能の設計・実装を担当。</li>
+              </ul></div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><div class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><ul class="experience-detail">
+                <li>遅延ロード（lazy load）、ユニファイドメモリ（unified memory）、キャッシュ常駐管理により、Open-Sora 2 推論時のピーク VRAM を 39.7 GB から 20.93 GB へ削減。</li>
+                <li>モデルの量子化なしで、24 GB 級 GPU 上での効率的な推論を実現。</li>
+              </ul></div></div></li>
             </ul>
 
             <h1 id="-education-ja">学歴</h1>
