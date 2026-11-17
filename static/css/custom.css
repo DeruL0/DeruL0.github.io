@@ -73,10 +73,6 @@
   text-justify: auto;
 }
 
-.page__content > [data-lang] > .experience-list li {
-  text-align: start;
-}
-
 .page__content .experience-entry {
   display: grid;
   grid-template-columns: 9em minmax(0, 1fr);
