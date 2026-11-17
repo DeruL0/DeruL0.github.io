@@ -283,20 +283,20 @@
             <h1 id="-experience">Work Experience</h1>
             <ul class="experience-list">
               <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – Present</em>:</span><div class="experience-body"><span class="experience-role"><strong>Tencent</strong>, Game Research &amp; Development Intern, Engine Research.</span><ul class="experience-detail">
-                <li>Developed a new volumetric smoke rendering pipeline in Unreal Engine 5 based on 4D Gaussian Splatting (4DGS). It supports global illumination and shadow casting, and faithfully reproduces the look of the original training data (VDB / Niagara).</li>
-                <li>Achieved efficient real-time rendering: each Actor holds on the order of 100K Gaussian primitives in about 55 MB of GPU memory, and full-screen smoke renders in about 1.5 ms at 2K resolution.</li>
+                <li><strong>Led the development of a 4D Gaussian Splatting (4DGS)-based volumetric smoke rendering solution for UE5.</strong> Owned the full process from technical research and rendering architecture design to core implementation and performance optimization, building a new real-time volumetric rendering pipeline that supports global illumination and shadow casting and matches the look of the original VDB / Niagara data.</li>
+                <li><strong>Achieved high-performance real-time rendering of about 100K Gaussian primitives.</strong> Optimized GPU compute, data representation and rendering cost, reaching about 55 MB of GPU memory per Actor and about 1.5 ms for full-screen smoke at 2K resolution.</li>
               </ul></div></div></li>
-              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer (Internship).</span><ul class="experience-detail">
-                <li>Developed an interactive 3DGS segmentation tool based on FlashSplat. Without pre-baked segmentation attributes, it extracts object-level segments from trained 3D Gaussian Splatting assets within seconds through click selection.</li>
-                <li>Implemented reference-scale size calibration on a PS5 development kit. The user specifies a reference segment and its real length in a 2D view, and the system solves for a scale factor that calibrates in-game objects to their true physical size.</li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>:</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>, Engineer Intern.</span><ul class="experience-detail">
+                <li><strong>Independently developed an interactive 3DGS segmentation tool based on FlashSplat.</strong> Handled algorithm research, solution design, core implementation and validation; without pre-baked segmentation attributes, the tool extracts object-level segments from trained 3DGS assets within seconds through interactive point selection.</li>
+                <li><strong>Designed and implemented object size calibration for the PS5 platform.</strong> From a reference segment and its real length specified in a 2D view, designed the scale-solving and model-scaling flow that maps in-game 3D objects to real physical dimensions, and implemented and validated it on a PS5 development kit.</li>
               </ul></div></div></li>
               <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – Present</em>:</span><div class="experience-body"><span class="experience-role"><strong>Synesthesias</strong>, Technical Development Intern.</span><ul class="experience-detail">
-                <li><strong>3D point-cloud wall inclination measurement:</strong> Designed and implemented a wall inclination measurement pipeline. It combines SVD plane fitting, depth layering and connected-component analysis to isolate the main wall surface from point clouds with vegetation and protrusions, then estimates inclination with robust regression to millimeter-level accuracy.</li>
-                <li><strong>CityVision:</strong> Contributing to feature development for CityVision, a landscape design tool built on Unity and PLATEAU 3D city models. Responsible for the design and implementation of features such as interactive area measurement.</li>
+                <li><strong>Led end-to-end development of a 3D point-cloud wall inclination measurement algorithm.</strong> Owned algorithm design, implementation, optimization and accuracy validation. Combined SVD plane fitting, depth layering and connected-component analysis to extract the main wall surface from point clouds with vegetation occlusion and protrusions, and used robust regression to measure inclination with millimeter-level accuracy.</li>
+                <li><strong>Developing features for CityVision, a 3D urban landscape design tool.</strong> Built on Unity and PLATEAU 3D city models; responsible for requirements analysis, interaction design, geometric computation, implementation and testing of features such as interactive area measurement.</li>
               </ul></div></div></li>
-              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>:</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><ul class="experience-detail">
-                <li>Reduced Open-Sora 2 inference peak VRAM from 39.7 GB to 20.93 GB through lazy loading, unified memory and cache residency management.</li>
-                <li>Enabled efficient inference on 24 GB-class GPUs without model quantization.</li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – .05</em>:</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>, Year-round Intern.</span><ul class="experience-detail">
+                <li><strong>Led low-VRAM inference optimization for the Open-Sora 2 video generation model.</strong> Owned VRAM bottleneck analysis, optimization design, core implementation and performance validation, combining lazy loading, unified memory and cache residency management to optimize weight loading and GPU memory use.</li>
+                <li><strong>Reduced peak inference VRAM from 39.7 GB to 20.93 GB (about 47% lower).</strong> Without model quantization, the model now runs on a single 24 GB GPU, which it previously could not.</li>
               </ul></div></div></li>
             </ul>
 
@@ -455,20 +455,20 @@
             <h1 id="-experience-zh">工作经历</h1>
             <ul class="experience-list">
               <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – 至今</em>：</span><div class="experience-body"><span class="experience-role"><strong>腾讯</strong>，Game Research &amp; Development Intern, Engine Research。</span><ul class="experience-detail">
-                <li>在 Unreal Engine 5 中开发基于四维高斯泼溅（4DGS）的全新体积烟雾渲染管线，支持全局光照与阴影投射，能够准确复现原始训练数据（VDB / Niagara）的视觉效果。</li>
-                <li>实现高效实时渲染：单个 Actor 承载十万量级高斯基元，显存占用约 55 MB；2K 分辨率下全屏烟雾渲染耗时约 1.5 ms。</li>
+                <li><strong>主导基于 4D Gaussian Splatting（4DGS）的 UE5 体积烟雾渲染方案研发。</strong>负责从技术调研、渲染架构设计到核心实现及性能优化的完整流程，构建新的实时体积渲染管线，支持全局光照与阴影投射，并实现与原始 VDB / Niagara 数据一致的视觉表现。</li>
+                <li><strong>实现十万量级高斯基元的高性能实时渲染。</strong>针对 GPU 计算、数据表示及渲染开销开展优化，单个 Actor 显存占用约 55 MB，在 2K 分辨率下实现全屏烟雾约 1.5 ms 的渲染耗时。</li>
               </ul></div></div></li>
-              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，工程师（实习）。</span><ul class="experience-detail">
-                <li>开发基于 FlashSplat 的 3DGS 交互式分割工具。无需预烘焙分割属性，通过点选即可在数秒内从已训练的 3D Gaussian Splatting 资产中提取物体级分割结果。</li>
-                <li>在 PS5 开发机上实现基于参考尺度的尺寸标定功能。用户在 2D 视图中指定参考线段及其真实长度，系统据此解算缩放系数，将游戏内物体校准至真实物理尺寸。</li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><div class="experience-body"><span class="experience-role"><strong>Polyphony Digital</strong>，Engineer Intern。</span><ul class="experience-detail">
+                <li><strong>独立负责基于 FlashSplat 的 3DGS 交互式分割工具研发。</strong>完成算法调研、方案设计、核心实现与功能验证，无需预烘焙分割属性，即可通过交互式点选，在数秒内从训练完成的 3DGS 资产中提取物体级分割结果。</li>
+                <li><strong>负责 PS5 平台物体尺寸标定功能的设计与实现。</strong>基于用户在 2D 视图中指定的参考线段及真实长度，设计尺度解算与模型缩放流程，实现游戏内三维物体与真实物理尺寸的对应，并在 PS5 开发机上完成实现与验证。</li>
               </ul></div></div></li>
               <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – 至今</em>：</span><div class="experience-body"><span class="experience-role"><strong>Synesthesias</strong>，技术开发实习生。</span><ul class="experience-detail">
-                <li><strong>三维点云墙面倾斜测量：</strong>设计并实现墙面倾斜测量流程。结合 SVD 平面拟合、深度分层与连通域分析，从含植被遮挡和墙面凸起的点云中分离出主体墙面，再用稳健回归估计倾斜度，测量精度达到毫米级。</li>
-                <li><strong>CityVision：</strong>参与景观设计工具 CityVision 的功能开发，该工具基于 Unity 与 PLATEAU 3D 城市模型。负责交互式面积测量等功能的设计与实现。</li>
+                <li><strong>主导三维点云墙面倾斜测量算法的端到端研发。</strong>负责算法设计、实现、优化及精度验证。结合 SVD 平面拟合、深度分层与连通域分析，解决植被遮挡、墙面凸起等复杂点云条件下的主体墙面提取问题，并通过稳健回归实现毫米级精度的倾斜测量。</li>
+                <li><strong>负责 CityVision 三维城市景观设计工具的功能研发。</strong>基于 Unity 与 PLATEAU 3D 城市模型，承担交互式面积测量等功能的需求分析、交互设计、几何计算、程序实现及测试。</li>
               </ul></div></div></li>
-              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习生。</span><ul class="experience-detail">
-                <li>通过延迟加载（lazy load）、统一内存（unified memory）与缓存驻留管理，将 Open-Sora 2 推理峰值显存从 39.7 GB 降至 20.93 GB。</li>
-                <li>无需模型量化，即可在 24 GB 级 GPU 上高效推理。</li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – .05</em>：</span><div class="experience-body"><span class="experience-role"><strong>Fixstars</strong>，通年实习生。</span><ul class="experience-detail">
+                <li><strong>主导 Open-Sora 2 视频生成模型的低显存推理优化。</strong>负责显存瓶颈分析、优化方案设计、核心实现及性能验证，结合延迟加载（Lazy Loading）、统一内存（Unified Memory）与缓存驻留管理，优化模型权重加载及 GPU 显存使用。</li>
+                <li><strong>将推理峰值显存从 39.7 GB 降至 20.93 GB，降低约 47%。</strong>在无需模型量化的条件下，使原本无法在 24 GB 显卡上运行的模型实现单卡推理。</li>
               </ul></div></div></li>
             </ul>
 
@@ -627,20 +627,20 @@
             <h1 id="-experience-ja">職歴</h1>
             <ul class="experience-list">
               <li><div class="experience-entry"><span class="experience-date"><em>2026.08 – 現在</em>：</span><div class="experience-body"><span class="experience-role"><strong>テンセント</strong>、Game Research &amp; Development Intern, Engine Research。</span><ul class="experience-detail">
-                <li>Unreal Engine 5 で 4 次元ガウシアンスプラッティング（4DGS）に基づく新しい体積煙レンダリングパイプラインを開発。グローバルイルミネーションと影の投影に対応し、学習元データ（VDB / Niagara）の見た目を忠実に再現。</li>
-                <li>高効率なリアルタイムレンダリングを実現：1 アクターあたり 10 万オーダーのガウシアンプリミティブを約 55 MB の GPU メモリで保持し、2K 解像度での全画面の煙の描画は約 1.5 ms。</li>
+                <li><strong>4D Gaussian Splatting（4DGS）に基づく UE5 向け体積煙レンダリング手法の研究開発を主導。</strong>技術調査、レンダリングアーキテクチャ設計からコア実装、性能最適化までを一貫して担当し、グローバルイルミネーションと影の投影に対応した新しいリアルタイム体積レンダリングパイプラインを構築。元の VDB / Niagara データと一致する見た目を実現。</li>
+                <li><strong>10 万オーダーのガウシアンプリミティブを高性能にリアルタイム描画。</strong>GPU 計算、データ表現、描画コストを最適化し、1 アクターあたりの GPU メモリ使用量は約 55 MB、2K 解像度での全画面の煙の描画は約 1.5 ms。</li>
               </ul></div></div></li>
               <li><div class="experience-entry"><span class="experience-date"><em>2026.07</em>：</span><div class="experience-body"><span class="experience-role"><strong>ポリフォニー・デジタル</strong>、エンジニア（インターン）。</span><ul class="experience-detail">
-                <li>FlashSplat ベースの 3DGS インタラクティブセグメンテーションツールを開発。セグメンテーション属性の事前ベイクなしで、クリック操作により学習済み 3D Gaussian Splatting アセットから物体単位のセグメントを数秒で抽出。</li>
-                <li>PS5 開発機上で参照スケールに基づくサイズキャリブレーション機能を実装。2D ビュー上で参照線分とその実寸を指定すると、スケール係数を算出し、ゲーム内オブジェクトを実際の物理サイズに補正。</li>
+                <li><strong>FlashSplat ベースの 3DGS インタラクティブセグメンテーションツールの開発を単独で担当。</strong>アルゴリズム調査、方式設計、コア実装、機能検証までを行い、セグメンテーション属性の事前ベイクなしで、クリック操作により学習済み 3DGS アセットから物体単位のセグメントを数秒で抽出。</li>
+                <li><strong>PS5 向けオブジェクトサイズキャリブレーション機能を設計・実装。</strong>2D ビュー上で指定された参照線分と実寸をもとに、スケール算出とモデルの拡縮処理を設計し、ゲーム内 3D オブジェクトを実際の物理サイズに対応させた。PS5 開発機上で実装・検証まで完了。</li>
               </ul></div></div></li>
               <li><div class="experience-entry"><span class="experience-date"><em>2026.05 – 現在</em>：</span><div class="experience-body"><span class="experience-role"><strong>シナスタジア</strong>、技術開発インターン。</span><ul class="experience-detail">
-                <li><strong>3 次元点群による壁面傾斜計測：</strong>壁面傾斜計測パイプラインを設計・実装。SVD 平面フィッティング、深度レイヤリング、連結成分解析を組み合わせて植生や突起を含む点群から主壁面を抽出し、ロバスト回帰によりミリ単位の精度で傾斜を推定。</li>
-                <li><strong>CityVision：</strong>Unity と PLATEAU 3D 都市モデルを基盤とする景観設計ツール CityVision の機能開発に参画。インタラクティブな面積計測などの機能の設計・実装を担当。</li>
+                <li><strong>3 次元点群による壁面傾斜計測アルゴリズムの開発をエンドツーエンドで主導。</strong>アルゴリズム設計、実装、最適化、精度検証を担当。SVD 平面フィッティング、深度レイヤリング、連結成分解析を組み合わせ、植生による遮蔽や壁面の突起を含む点群から主壁面を抽出し、ロバスト回帰によりミリ単位の精度で傾斜を計測。</li>
+                <li><strong>3D 都市景観設計ツール CityVision の機能開発を担当。</strong>Unity と PLATEAU 3D 都市モデルを基盤に、インタラクティブな面積計測などの機能について要件分析、インタラクション設計、幾何計算、実装、テストを担当。</li>
               </ul></div></div></li>
-              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – 2026.05</em>：</span><div class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><ul class="experience-detail">
-                <li>遅延ロード（lazy load）、ユニファイドメモリ（unified memory）、キャッシュ常駐管理により、Open-Sora 2 推論時のピーク VRAM を 39.7 GB から 20.93 GB へ削減。</li>
-                <li>モデルの量子化なしで、24 GB 級 GPU 上での効率的な推論を実現。</li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2026.04 – .05</em>：</span><div class="experience-body"><span class="experience-role"><strong>フィックスターズ</strong>、通年インターン。</span><ul class="experience-detail">
+                <li><strong>動画生成モデル Open-Sora 2 の省メモリ推論最適化を主導。</strong>VRAM のボトルネック分析、最適化方針の設計、コア実装、性能検証を担当し、遅延ロード（Lazy Loading）、ユニファイドメモリ（Unified Memory）、キャッシュ常駐管理を組み合わせてモデル重みのロードと GPU メモリ使用を最適化。</li>
+                <li><strong>推論時のピーク VRAM を 39.7 GB から 20.93 GB へ約 47% 削減。</strong>モデルの量子化なしで、従来は 24 GB GPU 上で動作しなかったモデルを単一 GPU で推論可能にした。</li>
               </ul></div></div></li>
             </ul>
 

@@ -88,6 +88,11 @@
   min-width: 0;
 }
 
+.page__content .experience-date,
+.page__content .experience-role {
+  font-size: 1.1em;
+}
+
 .page__content .experience-detail {
   display: block;
   margin-top: 0.1em;
