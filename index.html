@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- begin SEO -->
   <title>Shuyang Zhu (朱舒阳) - Homepage</title>
   <meta property="og:locale" content="en">
@@ -13,12 +14,9 @@
   <link rel="stylesheet" href="static/css/custom.css">
 
   <meta http-equiv="cleartype" content="on">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/jpg" href="./static/picture/icon.jpg">
-  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="icon" type="image/jpeg" href="./static/picture/icon.jpg">
 
   <link rel="stylesheet" href="static/css/academicons.css" />
-  <script src='static/js/latest.js' async></script>
   <script>
     (function() {
       // Light obfuscation only: deters casual scraping, not real secrecy.
@@ -67,41 +65,17 @@
       <div class="masthead__menu">
         <nav id="site-nav" class="greedy-nav">
           <button><div class="navicon"></div></button>
-          <!-- EN nav -->
-          <ul class="visible-links lang-nav lang-nav-en">
+          <!-- One nav for all languages: setLang() swaps text (data-en/zh/ja) and href (data-target + suffix) -->
+          <ul class="visible-links">
             <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-              <div class="masthead__menu-home-item"><a href="#about-me">Shuyang Zhu's Profile</a></div>
+              <div class="masthead__menu-home-item"><a href="#about-me" data-target="about-me" data-en="Shuyang Zhu's Profile" data-zh="朱舒阳" data-ja="朱舒阳のプロフィール">Shuyang Zhu's Profile</a></div>
             </li>
-            <li class="masthead__menu-item"><a href="/#about-me">Profile</a></li>
-            <li class="masthead__menu-item"><a href="/#-publications">Publications</a></li>
-            <li class="masthead__menu-item"><a href="/#-projects">Projects</a></li>
-            <li class="masthead__menu-item"><a href="/#-experience">Work Experience</a></li>
-            <li class="masthead__menu-item"><a href="/#-education">Education</a></li>
-            <li class="masthead__menu-item"><a href="/#-research">Awards</a></li>
-          </ul>
-          <!-- ZH nav -->
-          <ul class="visible-links lang-nav lang-nav-zh">
-            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-              <div class="masthead__menu-home-item"><a href="#about-me-zh">朱舒阳的主页</a></div>
-            </li>
-            <li class="masthead__menu-item"><a href="/#about-me-zh">个人简介</a></li>
-            <li class="masthead__menu-item"><a href="/#-publications-zh">发表</a></li>
-            <li class="masthead__menu-item"><a href="/#-projects-zh">项目</a></li>
-            <li class="masthead__menu-item"><a href="/#-experience-zh">工作经历</a></li>
-            <li class="masthead__menu-item"><a href="/#-education-zh">教育经历</a></li>
-            <li class="masthead__menu-item"><a href="/#-research-zh">奖项</a></li>
-          </ul>
-          <!-- JA nav -->
-          <ul class="visible-links lang-nav lang-nav-ja">
-            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-              <div class="masthead__menu-home-item"><a href="#about-me-ja">朱舒阳のプロフィール</a></div>
-            </li>
-            <li class="masthead__menu-item"><a href="/#about-me-ja">プロフィール</a></li>
-            <li class="masthead__menu-item"><a href="/#-publications-ja">発表</a></li>
-            <li class="masthead__menu-item"><a href="/#-projects-ja">プロジェクト</a></li>
-            <li class="masthead__menu-item"><a href="/#-experience-ja">職歴</a></li>
-            <li class="masthead__menu-item"><a href="/#-education-ja">学歴</a></li>
-            <li class="masthead__menu-item"><a href="/#-research-ja">受賞歴</a></li>
+            <li class="masthead__menu-item"><a href="#about-me" data-target="about-me" data-en="Profile" data-zh="个人简介" data-ja="プロフィール">Profile</a></li>
+            <li class="masthead__menu-item"><a href="#-publications" data-target="-publications" data-en="Publications" data-zh="论文发表" data-ja="発表">Publications</a></li>
+            <li class="masthead__menu-item"><a href="#-projects" data-target="-projects" data-en="Projects" data-zh="项目经历" data-ja="プロジェクト">Projects</a></li>
+            <li class="masthead__menu-item"><a href="#-experience" data-target="-experience" data-en="Work Experience" data-zh="工作经历" data-ja="職歴">Work Experience</a></li>
+            <li class="masthead__menu-item"><a href="#-education" data-target="-education" data-en="Education" data-zh="教育经历" data-ja="学歴">Education</a></li>
+            <li class="masthead__menu-item"><a href="#-research" data-target="-research" data-en="Awards" data-zh="荣誉奖项" data-ja="受賞歴">Awards</a></li>
           </ul>
           <ul class="hidden-links hidden"></ul>
         </nav>
@@ -115,24 +89,23 @@
           <img src="static/picture/ry_profile.jpg" class="author__avatar" alt="Shuyang Zhu (朱舒阳)">
         </div>
         <div class="author__content">
-          <h3 class="author__name">Shuyang Zhu<br>(朱舒阳)</h3>
+          <h3 class="author__name">Shuyang Zhu<span class="author__name-cjk">朱舒阳</span></h3>
           <p class="author__bio"></p>
         </div>
         <div class="author__urls-wrapper">
           <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
           <ul class="author__urls social-icons">
             <li>
-              <div style="white-space: normal; margin-bottom: 1em;">"First Principle Thinking"
-              </div>
+              <div style="white-space: normal; margin-bottom: 1em;">“First Principles Thinking”</div>
             </li>
-            <li class="contact-item"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>Tokyo, Japan</li>
-            <li class="contact-item"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>Nuclear Engineering and Management,<br>University of Tokyo</li>
+            <li class="contact-item"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i><span data-en="Tokyo, Japan" data-zh="东京，日本" data-ja="東京、日本">Tokyo, Japan</span></li>
+            <li class="contact-item"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><span class="line-split" data-en="Nuclear Engineering and Management,&#10;University of Tokyo" data-zh="东京大学&#10;原子力国际专攻" data-ja="東京大学&#10;原子力国際専攻">Nuclear Engineering and Management,&#10;University of Tokyo</span></li>
             <li class="contact-item"><a href="mailto:derulozsy@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i>derulozsy@gmail.com</a>
             </li>
             <li class="contact-item"><a href="https://github.com/DeruL0"><i class="fab fa-fw fa-github" aria-hidden="true"></i>GitHub</a></li>
           </ul>
-          <a class="sidebar-cv-link btn btn--info btn--block" href="static/file/Shuyang_Zhu_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Shuyang Zhu CV PDF">
-            <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i>View CV
+          <a class="sidebar-cv-link btn btn--info btn--block" href="static/file/Shuyang_Zhu_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i><span data-en="View CV" data-zh="CV" data-ja="CV">View CV</span>
           </a>
           <div class="author__urls_sm">
             <a href="mailto:derulozsy@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
@@ -171,9 +144,9 @@
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">The Visual Computer</div>
-                <img src="./static/picture/paper1.jpg" alt="paper1 illustration">
+                <img loading="lazy" src="./static/picture/paper1.jpg" alt="paper1 illustration">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="https://link.springer.com/article/10.1007/s00371-024-03466-4">An automatic framework for quadrilateral surface reconstruction with partitions from 3D point clouds</a><br>
                   <strong>Shuyang Zhu</strong> · Youlong Li · Jizhao Liu · Bin Li*
                 </p>
@@ -186,9 +159,9 @@
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">Accepted by ICPE 2026</div>
-                <img src="./static/picture/project4.png" alt="CTGS illustration">
+                <img loading="lazy" src="./static/picture/project4.png" alt="CTGS illustration">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="./static/paper/CTGS%20Hybrid%20Gaussian%20Splatting%20for%20Compact%20Industrial%20CT%20Representation.pdf">CTGS: Hybrid Gaussian Splatting for Compact Industrial CT Representation</a><br>
                   <strong>Shuyang Zhu*</strong> · Yukie Nagai<br>
                 </p>
@@ -203,7 +176,7 @@
             <h1 id="-projects">Projects</h1>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.png" alt="Surface meshes reconstructed directly from X-ray projections, including topology changes">
+                <img loading="lazy" src="./static/picture/project5.png" alt="Surface meshes reconstructed directly from X-ray projections, including topology changes">
               </div>
               <div class="paper-box-text">
                 <p><span class="paper-title">X-ray Projection-to-Mesh</span> (Ongoing)<br>
@@ -218,7 +191,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="Adaptive octree CT reconstruction from sparse X-ray projections">
+                <img loading="lazy" src="./static/picture/project5.jpg" alt="Adaptive octree CT reconstruction from sparse X-ray projections">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/adaptive-ct-framework">Adaptive Octree CT Reconstruction from Sparse Projections</a> (Ongoing)<br>
@@ -233,7 +206,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project2.png" alt="CT Simulation Software screenshot">
+                <img loading="lazy" src="./static/picture/project2.png" alt="CT Simulation Software screenshot">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/CT-Simulation">CT Simulation Software</a><br>
@@ -247,7 +220,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project1.png" alt="Porous CT Analysis Suite screenshot">
+                <img loading="lazy" src="./static/picture/project1.png" alt="Porous CT Analysis Suite screenshot">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/Porous-CT-Processor">Porous CT Processor</a><br>
@@ -261,7 +234,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project3.png" alt="STL Processor screenshot">
+                <img loading="lazy" src="./static/picture/project3.png" alt="STL Processor screenshot">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/STL-Processor">STL Processor</a><br>
@@ -301,24 +274,24 @@
             </ul>
 
             <h1 id="-education">Education</h1>
-            <ul>
-              <li><em>2025.10 – Present</em>: M.E. candidate, Nuclear Engineering and Management, the University of Tokyo, Tokyo, Japan.</li>
-              <li><em>2024.10 – 2025.03</em>: Special Auditor, Dept. of Electronics and Information Engineering, Hokkaido University, Sapporo, Japan.</li>
-              <li><em>2021.09 – 2025.07</em>: B.E. in Digital Media Technology, Lanzhou University, Lanzhou, China.</li>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025.10 – Present</em>:</span><div class="experience-body">M.E. candidate, Nuclear Engineering and Management, the University of Tokyo, Tokyo, Japan.</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2024.10 – 2025.03</em>:</span><div class="experience-body">Special Auditor, Dept. of Electronics and Information Engineering, Hokkaido University, Sapporo, Japan.</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2021.09 – 2025.07</em>:</span><div class="experience-body">B.E. in Digital Media Technology, Lanzhou University, Lanzhou, China.</div></div></li>
             </ul>
 
             <h1 id="-research">Awards</h1>
-            <ul>
-              <li><em>2025</em>: The University of Tokyo Fellowship.</li>
-              <li><em>2023</em>: 9th "Internet+" Innovation and Entrepreneurship Competition, Gansu Province Gold Award.</li>
-              <li><em>2022</em>: 13th BlueBridge Cup, Gansu Province Third Prize.</li>
-              <li><em>2022–2024</em>: Lanzhou University Scholarship.</li>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025</em>:</span><div class="experience-body">The University of Tokyo Fellowship.</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2023</em>:</span><div class="experience-body">9th "Internet+" Innovation and Entrepreneurship Competition, Gansu Province Gold Award.</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022</em>:</span><div class="experience-body">13th BlueBridge Cup, Gansu Province Third Prize.</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022–2024</em>:</span><div class="experience-body">Lanzhou University Scholarship.</div></div></li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
-              <img src="./static/picture/LZU.jpg" style="height:80px;" alt="Lanzhou University" />
-              <img src="./static/picture/Hokudai.jpg" style="height:80px;" alt="Hokkaido University" />
-              <img src="./static/picture/Utokyo.jpg" style="height:80px;" alt="University of Tokyo" />
+              <img loading="lazy" src="./static/picture/LZU.jpg" style="height:80px;" alt="Lanzhou University" />
+              <img loading="lazy" src="./static/picture/Hokudai.jpg" style="height:80px;" alt="Hokkaido University" />
+              <img loading="lazy" src="./static/picture/Utokyo.jpg" style="height:80px;" alt="University of Tokyo" />
             </div>
           </div><!-- /en -->
 
@@ -328,127 +301,129 @@
           <div data-lang="zh">
             <span id="about-me-zh"></span>
             <h1>个人简介</h1>
-            <p>我目前是<a href="http://www.n.t.u-tokyo.ac.jp/?lang=en">东京大学</a>修士学生，在<a href="https://researchmap.jp/yukie/">长井超慧准教授</a>指导下，从事高性能工业 CT 表示相关研究。</p>
-            <p>研究方向集中于<strong>三维重建、计算机视觉</strong>、<strong>几何处理</strong>与<strong>高性能计算</strong>，具体包括：</p>
+            <p>你好，我是朱舒阳，目前于<a href="http://www.n.t.u-tokyo.ac.jp/?lang=en">东京大学</a>工学系研究科就读（M2），在<a href="https://researchmap.jp/yukie/">长井超慧准教授</a>的指导下，研究工业 CT 数据的三维重建与高效表示。</p>
+            <p>技术方向：</p>
             <ul>
-              <li>三维几何处理与点云表面重建</li>
-              <li>3D Gaussian Splatting 与物体级分割</li>
-              <li>实时渲染、体表示与仿真</li>
-              <li>CUDA/GPU 加速与 GPU/ML 系统的显存优化</li>
+              <li>三维重建与几何处理：点云表面重建、网格处理</li>
+              <li>3D Gaussian Splatting：表示、渲染与物体级分割</li>
+              <li>实时渲染：体渲染、UE5 渲染管线</li>
+              <li>GPU 高性能计算：CUDA 加速、显存优化</li>
             </ul>
-            <p>我致力于将算法研究与工程实践相结合，开发高效、可扩展的三维重建、渲染与分析工具，应用于工业 CT、实时图形等场景。</p>
-            <p>欢迎合作交流，以及三维视觉、计算机图形学与 GPU 计算相关的工作机会，联系邮箱：<a href="mailto:derulozsy@gmail.com">derulozsy@gmail.com</a>。</p>
+            <p>欢迎三维视觉、计算机图形学与 GPU 计算方向的工作机会与科研合作。联系邮箱：<a href="mailto:derulozsy@gmail.com">derulozsy@gmail.com</a></p>
 
-            <h1 id="-publications-zh">发表</h1>
+            <h1 id="-publications-zh">论文发表</h1>
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">The Visual Computer</div>
-                <img src="./static/picture/paper1.jpg" alt="论文示意图">
+                <img loading="lazy" src="./static/picture/paper1.jpg" alt="论文示意图">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="https://link.springer.com/article/10.1007/s00371-024-03466-4">An automatic framework for quadrilateral surface reconstruction with partitions from 3D point clouds</a><br>
                   <strong>Shuyang Zhu</strong> · Youlong Li · Jizhao Liu · Bin Li*
                 </p>
                 <ul>
-                  <li>受 Polycube 参数化启发，提出包含四个步骤的框架将三维点云重建为带有光滑分区的四边形网格，步骤包含一维骨架提取、骨架驱动分割、初始网格生成与进化式重建。</li>
-                  <li>重建结果能良好保留点云原始几何特征，便于骨骼绑定等应用。</li>
+                  <li>受 Polycube 参数化启发，提出一套四步框架，将三维点云自动重建为分区平滑的四边形网格：一维骨架提取 → 骨架驱动分割 → 初始网格生成 → 进化式重建。</li>
+                  <li>重建网格能较好保留原始几何特征，可直接用于骨骼绑定等下游任务。</li>
                 </ul>
               </div>
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">Accepted by ICPE 2026</div>
-                <img src="./static/picture/project4.png" alt="CTGS 示意图">
+                <img loading="lazy" src="./static/picture/project4.png" alt="CTGS 示意图">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="./static/paper/CTGS%20Hybrid%20Gaussian%20Splatting%20for%20Compact%20Industrial%20CT%20Representation.pdf">CTGS: Hybrid Gaussian Splatting for Compact Industrial CT Representation</a><br>
                   <strong>Shuyang Zhu*</strong> · Yukie Nagai<br>
                 </p>
                 <ul>
-                  <li>一种将 CT 体数据转换为紧凑 Gaussian Splatting 表示的工业 CT 算法。</li>
-                  <li>关注 CT 内部结构（如空洞、材料密度变化等）和表面形状对齐，适合后续表面提取等分析工作流。</li>
-                  <li>采用表面高斯与体积高斯的混合模型，分别表示材料边界和内部衰减分布；文件大小最小可减至原始 DICOM 数据的约 1/35，提取网格的归一化 Chamfer-L1 约为 0.23%～0.50%。</li>
+                  <li>将工业 CT 体数据转换为紧凑的 Gaussian Splatting 表示。</li>
+                  <li>用“表面高斯 + 体积高斯”的混合模型，分别刻画材料边界和内部密度分布。空洞、密度变化等内部结构都能保留，便于后续的表面提取与分析。</li>
+                  <li>存储量最低可压缩到原始 DICOM 数据的约 1/35，提取网格的归一化 Chamfer-L1 为 0.23%～0.50%。</li>
                 </ul>
               </div>
             </div>
 
-            <h1 id="-projects-zh">项目</h1>
+            <h1 id="-projects-zh">项目经历</h1>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.png" alt="直接从 X 射线投影重建表面网格及其拓扑变化">
+                <img loading="lazy" src="./static/picture/project5.png" alt="直接从 X 射线投影重建表面网格及其拓扑变化">
               </div>
               <div class="paper-box-text">
                 <p><span class="paper-title">X 射线投影到表面网格</span>（进行中）<br>
                   <strong>拓扑自适应表面重建</strong>
                 </p>
                 <ul>
-                  <li>一条直接从 X 射线投影生成水密表面网格的流程，无需先重建体数据。</li>
-                  <li>拓扑可在优化过程中改变：网格可分裂为多个部分、生成贯穿孔洞或形成内部空腔，无需预先知道物体的拓扑。</li>
-                  <li>在所有测试形状上均恢复了正确拓扑；表面误差约为包围盒对角线的 0.1–0.15%，借助原生 CUDA 加速，每个形状的拟合时间不到一分钟。</li>
+                  <li>跳过体数据重建，直接从 X 射线投影优化出水密的表面网格。</li>
+                  <li>优化过程中拓扑可以自动变化，比如分裂成多个部件、生成通孔或内部空腔，不需要预先知道物体的拓扑。</li>
+                  <li>所有测试形状的拓扑都被正确恢复。表面误差约为包围盒对角线的 0.1%～0.15%，基于原生 CUDA 实现，单个形状拟合不到 1 分钟。</li>
                 </ul>
               </div>
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="基于自适应八叉树的稀疏 X 射线投影 CT 重建结果">
+                <img loading="lazy" src="./static/picture/project5.jpg" alt="基于自适应八叉树的稀疏 X 射线投影 CT 重建结果">
               </div>
               <div class="paper-box-text">
-                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">基于自适应八叉树的稀疏投影 CT 重建</a>（进行中）<br>
+                <p><a href="https://github.com/DeruL0/adaptive-ct-framework">基于自适应八叉树的稀疏视角 CT 重建</a>（进行中）<br>
                   <strong>紧凑的投影域体数据表示</strong>
                 </p>
                 <ul>
-                  <li>直接从 X 射线投影把 CT 体积重建成紧凑的自适应八叉树，用于大规模工业 CT 数据的存储与分析。</li>
-                  <li>关注材料界面的清晰度、细缝和准确的表面提取，适用于固定字节预算和稀疏视角：8 MB（比 1.98 GB 体素体积小 232 倍）下体积 PSNR 37.8 dB、平均表面距离 0.19 体素；训练视角从 240 降到 64 只损失 0.55 dB。</li>
-                  <li>叶子分为常数、三线性、平面阶跃三种类型，配合精确的 CUDA 射线积分、基于留出视角的细化决策和保边正则；笔记本 GPU 上一次训练约 9 分钟。</li>
+                  <li>直接从 X 射线投影重建出紧凑的自适应八叉树体数据，用于大规模工业 CT 数据的存储与分析。</li>
+                  <li>在固定存储预算和稀疏视角下，重点保证材料界面清晰、细缝不丢失、表面提取准确。
+                    <ul>
+                      <li>8 MB 存储（约为 1.98 GB 原始体素数据的 1/232）下，体积 PSNR 达 37.8 dB，平均表面距离 0.19 体素。</li>
+                      <li>训练视角从 240 减到 64，PSNR 仅下降 0.55 dB。</li>
+                    </ul>
+                  </li>
+                  <li>八叉树叶节点支持常数、三线性、平面阶跃三种类型，配合精确的 CUDA 射线积分、基于留出视角的细分决策和保边正则。笔记本 GPU 上单次训练约 9 分钟。</li>
                 </ul>
               </div>
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project2.png" alt="CT 模拟软件截图">
+                <img loading="lazy" src="./static/picture/project2.png" alt="CT 模拟软件截图">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/CT-Simulation">CT 模拟软件</a><br>
-                  <strong>高精度可定制化 CT 仿真</strong>
+                  <strong>高精度、可定制的 CT 仿真</strong>
                 </p>
                 <ul>
-                  <li>开发了可基于三维模型以物理精度模拟 CT 扫描的软件。</li>
-                  <li>包含晶格结构生成、缺陷注入、基于有限元法（FEM）的物理压缩仿真，以及面向大体积处理的 GPU 动态批处理。</li>
+                  <li>开发了一套从三维模型出发、按物理规律模拟 CT 扫描的软件。</li>
+                  <li>支持晶格结构生成、缺陷注入和基于有限元（FEM）的压缩仿真，并用 GPU 动态批处理处理大体积数据。</li>
                 </ul>
               </div>
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project1.png" alt="多孔 CT 分析软件截图">
+                <img loading="lazy" src="./static/picture/project1.png" alt="多孔 CT 分析软件截图">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/Porous-CT-Processor">多孔介质 CT 处理器</a><br>
-                  <strong>孔隙网络建模 + 4D CT 分析</strong>
+                  <strong>孔隙网络建模与 4D CT 分析</strong>
                 </p>
                 <ul>
-                  <li>设计了带 GUI 的多孔介质 CT 数据分析与可视化套件。</li>
-                  <li>集成渲染、孔隙网络建模（PNM）、孔隙演化的 4D 追踪，以及基于 CuPy 的 GPU 加速。</li>
+                  <li>开发了带图形界面的多孔介质 CT 数据分析与可视化工具。</li>
+                  <li>集成三维渲染、孔隙网络建模（PNM）和孔隙演化的 4D 追踪，并用 CuPy 实现 GPU 加速。</li>
                 </ul>
               </div>
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project3.png" alt="STL 处理工具截图">
+                <img loading="lazy" src="./static/picture/project3.png" alt="STL 处理工具截图">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/STL-Processor">STL 处理工具</a><br>
-                  <strong>DirectX 12 网格处理与可视化</strong>
+                  <strong>基于 DirectX 12 的网格处理与可视化</strong>
                 </p>
                 <ul>
-                  <li>开发了用于 STL 网格修复与可视化的 DirectX 12 应用程序。</li>
-                  <li>实现 Polycube 参数化、孔洞填补、法向量纠正、降噪和平滑处理。</li>
+                  <li>基于 DirectX 12 开发的 STL 网格修复与可视化程序。</li>
+                  <li>实现了 Polycube 参数化、孔洞修补、法向修正、去噪与平滑。</li>
                 </ul>
               </div>
             </div>
             <ul>
-              <li><strong>课程项目</strong><br>
-                  在 <a href="https://github.com/DeruL0/Principles-of-Computer-Organization">Vivado 硬件设计项目</a>中实现单周期和五级流水线 CPU 架构。
-                  使用 Godot 制作搜索、图和树算法的<a href="https://github.com/DeruL0/Algorithm_HW_ZSY">算法可视化项目</a>。
+              <li><strong>课程项目</strong>：在 Vivado 中<a href="https://github.com/DeruL0/Principles-of-Computer-Organization">实现单周期与五级流水线 CPU</a>；用 Godot 制作搜索、图与树算法的<a href="https://github.com/DeruL0/Algorithm_HW_ZSY">可视化演示</a>。
               </li>
             </ul>
 
@@ -473,24 +448,24 @@
             </ul>
 
             <h1 id="-education-zh">教育经历</h1>
-            <ul>
-              <li><em>2025.10 – 至今</em>：修士在读，东京大学 工学系研究科 原子力国际专攻，东京，日本。</li>
-              <li><em>2024.10 – 2025.03</em>：特别听讲学生，北海道大学 工学部 情报电子工学科，札幌，日本。</li>
-              <li><em>2021.09 – 2025.07</em>：工学学士，兰州大学 新闻与传播学院　数字媒体技术专业，兰州，中国。</li>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025.10 – 至今</em>：</span><div class="experience-body">修士在读，东京大学 工学系研究科 原子力国际专攻（核工程与管理），日本东京。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2024.10 – 2025.03</em>：</span><div class="experience-body">特别听讲生（访问学习），北海道大学 工学部 信息电子工学科，日本札幌。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2021.09 – 2025.07</em>：</span><div class="experience-body">工学学士，兰州大学 数字媒体技术专业（新闻与传播学院），中国兰州。</div></div></li>
             </ul>
 
-            <h1 id="-research-zh">奖项</h1>
-            <ul>
-              <li><em>2025</em>：东京大学Fellowship（University of Tokyo Fellowship）。</li>
-              <li><em>2023</em>：第九届"互联网+"创新创业大赛甘肃省金奖。</li>
-              <li><em>2022</em>：第十三届蓝桥杯甘肃省三等奖。</li>
-              <li><em>2022–2024</em>：兰州大学奖学金。</li>
+            <h1 id="-research-zh">荣誉奖项</h1>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025</em>：</span><div class="experience-body">东京大学 Fellowship 奖学金。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2023</em>：</span><div class="experience-body">第九届“互联网+”创新创业大赛 甘肃省金奖。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022</em>：</span><div class="experience-body">第十三届蓝桥杯 甘肃省三等奖。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022–2024</em>：</span><div class="experience-body">兰州大学奖学金。</div></div></li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
-              <img src="./static/picture/LZU.jpg" style="height:80px;" alt="兰州大学" />
-              <img src="./static/picture/Hokudai.jpg" style="height:80px;" alt="北海道大学" />
-              <img src="./static/picture/Utokyo.jpg" style="height:80px;" alt="东京大学" />
+              <img loading="lazy" src="./static/picture/LZU.jpg" style="height:80px;" alt="兰州大学" />
+              <img loading="lazy" src="./static/picture/Hokudai.jpg" style="height:80px;" alt="北海道大学" />
+              <img loading="lazy" src="./static/picture/Utokyo.jpg" style="height:80px;" alt="东京大学" />
             </div>
           </div><!-- /zh -->
 
@@ -500,7 +475,7 @@
           <div data-lang="ja">
             <span id="about-me-ja"></span>
             <h1>プロフィール</h1>
-            <p><a href="http://www.n.t.u-tokyo.ac.jp/">東京大学</a>の大学院生として、<a href="https://researchmap.jp/yukie/">长井超慧准教授</a>の指導のもと、高性能な工業用 CT 表現に関する研究に取り組んでいます。</p>
+            <p><a href="http://www.n.t.u-tokyo.ac.jp/">東京大学</a>の大学院生として、<a href="https://researchmap.jp/yukie/">長井超慧准教授</a>の指導のもと、高性能な工業用 CT 表現に関する研究に取り組んでいます。</p>
             <p>研究関心は<strong>3D 再構成、コンピュータビジョン</strong>、<strong>幾何処理</strong>、<strong>高性能計算</strong>を中心としており、具体的には以下の分野に取り組んでいます：</p>
             <ul>
               <li>3D 幾何処理と点群表面再構成</li>
@@ -515,9 +490,9 @@
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">The Visual Computer</div>
-                <img src="./static/picture/paper1.jpg" alt="論文図">
+                <img loading="lazy" src="./static/picture/paper1.jpg" alt="論文図">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="https://link.springer.com/article/10.1007/s00371-024-03466-4">An automatic framework for quadrilateral surface reconstruction with partitions from 3D point clouds</a><br>
                   <strong>Shuyang Zhu</strong> · Youlong Li · Jizhao Liu · Bin Li*
                 </p>
@@ -530,9 +505,9 @@
             <div class="paper-box">
               <div class="paper-box-image">
                 <div class="badge">Accepted by ICPE 2026</div>
-                <img src="./static/picture/project4.png" alt="CTGS 図">
+                <img loading="lazy" src="./static/picture/project4.png" alt="CTGS 図">
               </div>
-              <div class="paper-box-text" style="width:100%">
+              <div class="paper-box-text">
                 <p><a href="./static/paper/CTGS%20Hybrid%20Gaussian%20Splatting%20for%20Compact%20Industrial%20CT%20Representation.pdf">CTGS: Hybrid Gaussian Splatting for Compact Industrial CT Representation</a><br>
                   <strong>Shuyang Zhu*</strong> · Yukie Nagai<br>
                 </p>
@@ -547,7 +522,7 @@
             <h1 id="-projects-ja">プロジェクト</h1>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.png" alt="X 線投影から直接再構成した表面メッシュとトポロジー変化">
+                <img loading="lazy" src="./static/picture/project5.png" alt="X 線投影から直接再構成した表面メッシュとトポロジー変化">
               </div>
               <div class="paper-box-text">
                 <p><span class="paper-title">X 線投影から表面メッシュへ</span>（進行中）<br>
@@ -562,7 +537,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project5.jpg" alt="適応八分木による疎 X 線投影 CT 再構成結果">
+                <img loading="lazy" src="./static/picture/project5.jpg" alt="適応八分木による疎 X 線投影 CT 再構成結果">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/adaptive-ct-framework">適応八分木による疎投影 CT 再構成</a>（進行中）<br>
@@ -577,7 +552,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project2.png" alt="CT シミュレーションソフトのスクリーンショット">
+                <img loading="lazy" src="./static/picture/project2.png" alt="CT シミュレーションソフトのスクリーンショット">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/CT-Simulation">CT シミュレーションソフトウェア</a><br>
@@ -591,7 +566,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project1.png" alt="多孔質 CT 解析ツールのスクリーンショット">
+                <img loading="lazy" src="./static/picture/project1.png" alt="多孔質 CT 解析ツールのスクリーンショット">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/Porous-CT-Processor">多孔質 CT プロセッサ</a><br>
@@ -605,7 +580,7 @@
             </div>
             <div class="paper-box">
               <div class="paper-box-image">
-                <img src="./static/picture/project3.png" alt="STL プロセッサのスクリーンショット">
+                <img loading="lazy" src="./static/picture/project3.png" alt="STL プロセッサのスクリーンショット">
               </div>
               <div class="paper-box-text">
                 <p><a href="https://github.com/DeruL0/STL-Processor">STL プロセッサ</a><br>
@@ -645,24 +620,24 @@
             </ul>
 
             <h1 id="-education-ja">学歴</h1>
-            <ul>
-              <li><em>2025.10 – 現在</em>：修士課程、東京大学 大学院工学系研究科 原子力国際専攻、東京、日本。</li>
-              <li><em>2024.10 – 2025.03</em>：特別聴講学生、北海道大学 工学部 情報エレクトロニクス学科、札幌、日本。</li>
-              <li><em>2021.09 – 2025.07</em>：工学学士、蘭州大学 新聞与伝播学院 デジタルメディア技術専攻、蘭州、中国。</li>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025.10 – 現在</em>：</span><div class="experience-body">修士課程、東京大学 大学院工学系研究科 原子力国際専攻、東京、日本。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2024.10 – 2025.03</em>：</span><div class="experience-body">特別聴講学生、北海道大学 工学部 情報エレクトロニクス学科、札幌、日本。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2021.09 – 2025.07</em>：</span><div class="experience-body">工学学士、蘭州大学 新聞与伝播学院 デジタルメディア技術専攻、蘭州、中国。</div></div></li>
             </ul>
 
             <h1 id="-research-ja">受賞歴</h1>
-            <ul>
-              <li><em>2025</em>：東京大学フェローシップ（University of Tokyo Fellowship）。</li>
-              <li><em>2023</em>：第 9 回「インターネット+」イノベーション・起業コンテスト 甘粛省金賞。</li>
-              <li><em>2022</em>：第 13 回ブルーブリッジカップ 甘粛省三等賞。</li>
-              <li><em>2022–2024</em>：蘭州大学奨学金。</li>
+            <ul class="date-list">
+              <li><div class="experience-entry"><span class="experience-date"><em>2025</em>：</span><div class="experience-body">東京大学フェローシップ（University of Tokyo Fellowship）。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2023</em>：</span><div class="experience-body">第 9 回「インターネット+」イノベーション・起業コンテスト 甘粛省金賞。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022</em>：</span><div class="experience-body">第 13 回ブルーブリッジカップ 甘粛省三等賞。</div></div></li>
+              <li><div class="experience-entry"><span class="experience-date"><em>2022–2024</em>：</span><div class="experience-body">蘭州大学奨学金。</div></div></li>
             </ul>
 
             <div class="logo-row" style="margin-top:40px;text-align:center;">
-              <img src="./static/picture/LZU.jpg" style="height:80px;" alt="蘭州大学" />
-              <img src="./static/picture/Hokudai.jpg" style="height:80px;" alt="北海道大学" />
-              <img src="./static/picture/Utokyo.jpg" style="height:80px;" alt="東京大学" />
+              <img loading="lazy" src="./static/picture/LZU.jpg" style="height:80px;" alt="蘭州大学" />
+              <img loading="lazy" src="./static/picture/Hokudai.jpg" style="height:80px;" alt="北海道大学" />
+              <img loading="lazy" src="./static/picture/Utokyo.jpg" style="height:80px;" alt="東京大学" />
             </div>
           </div><!-- /ja -->
 
@@ -673,25 +648,51 @@
 
   <script src="static/js/main.min.js"></script>
   <script>
+    var HTML_LANG = { en: 'en', zh: 'zh-CN', ja: 'ja' };
+
+    // Theme's updateNav() puts back only one hidden item per call; repeat so a big widen restores all of them.
+    function fitNav() {
+      if (typeof updateNav !== 'function') return;
+      for (var i = 0; i < 7; i++) updateNav();
+    }
+    window.addEventListener('resize', fitNav);
+
     function setLang(lang, shouldTrack) {
       if (shouldTrack === undefined) shouldTrack = true;
+      document.documentElement.lang = HTML_LANG[lang];
       document.querySelectorAll('[data-lang]').forEach(function(el) {
         el.classList.toggle('lang-active', el.dataset.lang === lang);
       });
-      ['en', 'zh', 'ja'].forEach(function(l) {
-        document.querySelectorAll('.lang-nav-' + l).forEach(function(el) {
-          el.style.display = (l === lang) ? '' : 'none';
-        });
-        var btn = document.getElementById('btn-' + l);
-        if (btn) btn.classList.toggle('active', l === lang);
+      // Sidebar and nav labels carry data-en/zh/ja. Nav items may sit in .hidden-links after greedy-nav moved them.
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = el.dataset[lang];
       });
-      localStorage.setItem('lang', lang);
+      document.querySelectorAll('#site-nav a[data-target]').forEach(function(a) {
+        a.setAttribute('href', '#' + a.dataset.target + (lang === 'en' ? '' : '-' + lang));
+      });
+      ['en', 'zh', 'ja'].forEach(function(l) {
+        var btn = document.getElementById('btn-' + l);
+        if (btn) {
+          btn.classList.toggle('active', l === lang);
+          btn.setAttribute('aria-pressed', l === lang);
+        }
+      });
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+      fitNav(); // labels changed width
       if (shouldTrack && typeof window.trackAnalyticsEvent === 'function') {
         window.trackAnalyticsEvent('switch_language', { language: lang });
       }
     }
     (function() {
-      setLang(localStorage.getItem('lang') || 'en', false);
+      // A link like #-projects-zh names its language explicitly; it wins over the saved choice.
+      var hash = decodeURIComponent(location.hash.slice(1));
+      var m = hash.match(/-(zh|ja)$/);
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      var lang = m ? m[1] : (hash && document.getElementById(hash) ? 'en' : (saved || 'en'));
+      setLang(lang, false);
+      var target = hash && document.getElementById(hash);
+      if (target) target.scrollIntoView();
     })();
   </script>
   <script>

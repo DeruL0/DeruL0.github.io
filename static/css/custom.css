@@ -4,10 +4,33 @@
   }
 }
 
-/* Hide non-active language navs by default; JS overrides display */
-.lang-nav-zh,
-.lang-nav-ja {
-  display: none;
+/* Sidebar text with a fixed break (&#10; in data-en/zh/ja), e.g. "东京大学 / 原子力国际专攻" */
+.sidebar .author__urls .line-split {
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
+/* Chinese name as a quiet subtitle under the English name */
+.author__name-cjk {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.75em;
+  font-weight: normal;
+  color: #7a8288;
+}
+
+/* Keep anchor targets clear of the sticky masthead */
+.page__content [id] {
+  scroll-margin-top: 4em;
+}
+
+/* Leave room on the right of the masthead for the fixed language switcher */
+.masthead__menu {
+  padding-right: 150px; /* switcher is ~135px wide */
+}
+
+.masthead__menu .greedy-nav {
+  min-width: 0; /* theme's 250px pushes the menu button under the switcher on phones */
 }
 
 .sidebar .author__urls,
@@ -66,16 +89,19 @@
   margin-left: 2.8em;
 }
 
-.page__content > [data-lang] > p,
-.page__content > [data-lang] > ul li,
-.page__content .paper-box-text ul li {
-  text-align: justify;
-  text-justify: auto;
+/* Justify only on wide columns; on phones it stretches CJK lines around long words like the email */
+@media (min-width: 48em) {
+  .page__content > [data-lang] > p,
+  .page__content > [data-lang] > ul li,
+  .page__content .paper-box-text ul li {
+    text-align: justify;
+    text-justify: auto;
+  }
 }
 
 .page__content .experience-entry {
   display: grid;
-  grid-template-columns: 9em minmax(0, 1fr);
+  grid-template-columns: 9.5em minmax(0, 1fr); /* fits "2026.08 – Present:" at 1.1em */
   column-gap: 0.35em;
   align-items: baseline;
 }
@@ -86,6 +112,11 @@
 
 .page__content .experience-body {
   min-width: 0;
+}
+
+/* Education / Awards reuse the experience grid so all text starts on one column */
+.page__content .date-list .experience-date {
+  font-size: 1em;
 }
 
 .page__content .experience-date,
@@ -120,9 +151,28 @@
   }
 }
 
+/* Card titles: one look for linked and unlinked titles; links reveal themselves on hover */
 .paper-box-text p a,
 .paper-box-text p .paper-title {
   font-size: 1.3em;
+  font-weight: 600;
+  color: #2b2f33;
+  text-decoration: none;
+}
+
+.paper-box-text p a:hover {
+  color: #224b8d;
+  text-decoration: underline;
+}
+
+.paper-box-text p a[href*="github.com"]::after {
+  content: "\f09b";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+  font-size: 0.75em;
+  margin-left: 0.4em;
+  color: #7a8288;
+  display: inline-block; /* keeps the icon out of the hover underline */
 }
 /* ── Language switcher ── */
 #lang-switcher {
@@ -160,27 +210,45 @@
 [data-lang] { display: none; }
 [data-lang].lang-active { display: block; }
 
-/* ── paper-box: 50/50 split on wide screens ── */
+/* ── paper-box: image 35%, text fills the rest so every section ends on the same right edge ── */
 @media (min-width: 48em) {
   .paper-box .paper-box-image {
-    min-width: unset !important;
-    max-width: 35% !important;
-    width: 65% !important;
-    flex: 0 0 50%;
+    min-width: 0;
+    max-width: 35%;
+    flex: 0 0 35%;
   }
   .paper-box .paper-box-image img {
     max-width: 100%;
     width: 100%;
-    object-fit: cover;
   }
   .paper-box .paper-box-text {
-    max-width: 50% !important;
-    flex: 0 0 50%;
+    max-width: none;
+    min-width: 0;
+    flex: 1 1 0;
   }
-  /* align with paper-box text edge (image 35% + text 50%) */
-  .page__content .experience-list {
-    max-width: 85%;
-  }
+}
+
+/* Softer image frame instead of the theme's heavy 3px 3px 6px #888 */
+.paper-box .paper-box-image img {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* The next h1 already draws a rule; drop the card's own so headings aren't boxed by two lines */
+.paper-box:has(+ :not(.paper-box)) {
+  border-bottom: none;
+}
+
+/* CJK has no italic; the browser fakes a slant on 至今/現在 */
+[data-lang="zh"] em,
+[data-lang="ja"] em {
+  font-style: normal;
+}
+
+/* Justified English needs hyphenation, otherwise long words open wide gaps */
+[data-lang="en"] {
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 /* ── Responsive paper-box fix: stack on narrow screens ── */
@@ -190,14 +258,12 @@
     align-items: center;
   }
   .paper-box .paper-box-text {
-    max-width: 100% !important;
-    padding-left: 0 !important;
+    max-width: 100%;
+    padding-left: 0;
     order: 2;
   }
   .paper-box .paper-box-image {
-    min-width: unset !important;
-    max-width: 100% !important;
-    width: 80% !important;
+    width: 80%;
     order: 1;
   }
   .paper-box .paper-box-image img {
